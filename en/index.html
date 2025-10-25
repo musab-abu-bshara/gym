@@ -4,13 +4,111 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Ghost Gym | Home</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
 </head>
 
-<body>
+<body class="bg-light">
 
-  <!-- Content placeholder -->
+  <!-- Start Top Bar  -->
+  <header class="bg-dark ">
+    <div class="container d-flex justify-content-between">
+      <div id="phone" class="text-light">
+        <i class="bi bi-telephone"></i>
+        <span id="number">+1 (555) 123‑4567</span>
+      </div>
+      <div class="social d-flex justify-content-between gap-3">
+        <a href="#" class="text-light"><i class="bi bi-twitter-x"></i></a>
+        <a href="#" class="text-light"><i class="bi bi-linkedin"></i></a>
+        <a href="#" class="text-light"><i class="bi bi-github"></i></a>
+      </div>
+    </div>
+  </header>
+  <!-- End Top Bar  -->
+  <!-- Start Navbar -->
+  <nav class="navbar navbar-expand-lg bg-body-tertiary border-bottom">
+    <div class="container">
+      <a class="navbar-brand" href="#">
+        <i class="bi bi-incognito"></i>
+        Ghost Gym
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="services.html">Services</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="portfolio.html">Portfolio</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="blog.html">Blog</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="about.html">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="contact.html">Contact</a>
+          </li>
+        </ul>
+        <div class="d-flex justify-content-between gap-2">
+          <button class="btn btn-outline-secondary" type="submit">العربية</button>
+          <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal" data-bs-whatever="@mdo">
+            <i class="bi bi-send"></i>
+            Get Quote
+          </button>
+
+          <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h1 class="modal-title fs-5" id="exampleModalLabel">Quick Quote</h1>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                  <form>
+                    <div class="mb-3">
+                      <input type="text" class="form-control" id="recipient-name" placeholder="Name">
+                    </div>
+                    <div class="mb-3">
+                      <input type="email" class="form-control" id="recipient-name" placeholder="Email">
+                    </div>
+                    <div class="mb-3">
+                      <textarea class="form-control" id="message-text" placeholder="Project details" ></textarea>
+                    </div>
+                  </form>
+                  <button type="button" class="btn btn-primary w-100">
+                    <i class="bi bi-send"></i>
+                    Submit
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </nav>
+  <!-- <nav class="py-2 border-bottom">
+    <div class="container">
+      <div id="links">
+        <a href="#" id="brand" class="text-dark text-decoration-none fs-5 fw-bold">
+          <i class="bi bi-incognito"></i>
+          <span id="brand-name">Ghost Gym</span>
+        </a>
+        <ul id="links">
+          <li><a href="index.html">Home</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav> -->
+  <!-- End Navbar -->
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
   <script src="../assets/js/site-data.js"></script>

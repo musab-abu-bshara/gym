@@ -1,4 +1,4 @@
-// FitGym Site Data and Functions
+// Tiger Gym Site Data and Functions
 
 // Detect language from page
 const isArabic = document.documentElement.lang === "ar";
@@ -151,7 +151,7 @@ const transformationsEn = [
     weightLost: "30 kg",
     duration: "8 months",
     story:
-      "Lost 30kg in 8 months with dedication and expert guidance from FitGym trainers.",
+      "Lost 30kg in 8 months with dedication and expert guidance from Tiger Gym trainers.",
   },
   {
     id: 2,

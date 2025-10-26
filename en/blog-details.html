@@ -4,13 +4,307 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>FitGym | Blog Post</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
 </head>
 
-<body>
+<body class="bg-dark text-light">
 
-  <!-- Content placeholder -->
+  <!-- Start Top Bar -->
+  <header class="bg-warning text-dark py-2">
+    <div class="container d-flex justify-content-between align-items-center flex-wrap">
+      <div class="d-flex gap-3">
+        <span><i class="bi bi-telephone-fill"></i> +966 50 123 4567</span>
+        <span><i class="bi bi-envelope-fill"></i> info@fitgym.com</span>
+      </div>
+      <div class="d-flex gap-3">
+        <a href="#" class="text-dark"><i class="bi bi-facebook"></i></a>
+        <a href="#" class="text-dark"><i class="bi bi-instagram"></i></a>
+        <a href="#" class="text-dark"><i class="bi bi-twitter-x"></i></a>
+      </div>
+    </div>
+  </header>
+  <!-- End Top Bar -->
+
+  <!-- Start Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark border-bottom border-warning">
+    <div class="container">
+      <a class="navbar-brand text-warning fw-bold" href="index.html">
+        <img src="../assets/media/logo.png" width="40" height="40" alt="FitGym Logo">
+        FitGym
+      </a>
+
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="services.html">Classes</a></li>
+          <li class="nav-item"><a class="nav-link" href="portfolio.html">Transformations</a></li>
+          <li class="nav-item"><a class="nav-link active" href="blog.html">Blog</a></li>
+          <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+        </ul>
+
+        <div class="d-flex gap-2">
+          <a href="../ar/blog-details.html" class="btn btn-outline-warning">العربية</a>
+          <button class="btn btn-warning" data-bs-toggle="modal" data-bs-target="#membershipModal">
+            Get Membership
+          </button>
+
+          <div class="modal fade" id="membershipModal" tabindex="-1" data-bs-theme="dark"
+            aria-labelledby="membershipModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h1 class="modal-title fs-5 text-light" id="membershipModalLabel">Get Your Membership</h1>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                  <form>
+                    <div class="mb-3">
+                      <input type="text" class="form-control" placeholder="Full Name" required>
+                    </div>
+                    <div class="mb-3">
+                      <input type="email" class="form-control" placeholder="Email Address" required>
+                    </div>
+                    <div class="mb-3">
+                      <input type="tel" class="form-control" placeholder="Phone Number" required>
+                    </div>
+                    <div class="mb-3">
+                      <select class="form-select" aria-label="Membership Type">
+                        <option selected>Select Membership Type</option>
+                        <option value="monthly">Monthly Membership</option>
+                        <option value="quarterly">Quarterly Membership</option>
+                        <option value="annual">Annual Membership</option>
+                        <option value="personal">Personal Training Package</option>
+                      </select>
+                    </div>
+                    <div class="mb-3">
+                      <textarea class="form-control" rows="3" placeholder="Message (Optional)"></textarea>
+                    </div>
+                  </form>
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-warning w-100">Submit Inquiry</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </nav>
+  <!-- End Navbar -->
+
+  <!-- Start Blog Details Section -->
+  <section class="py-5 bg-dark">
+    <div class="container">
+      <div class="row g-4">
+        <!-- Main Content -->
+        <div class="col-lg-8">
+          <div class="card bg-secondary border-warning">
+            <div class="card-body p-4">
+              <div id="blogDetails">
+                <!-- Blog details will be loaded here by JavaScript -->
+              </div>
+
+              <!-- Article Content -->
+              <div class="mt-4">
+                <h3 class="text-warning mb-3">Introduction</h3>
+                <p class="text-light">
+                  Welcome to our comprehensive guide on fitness and wellness. Whether you're just starting your fitness journey or looking to take your training to the next level, understanding the fundamentals is crucial for long-term success.
+                </p>
+                <p class="text-light">
+                  At FitGym, we believe in a holistic approach to fitness that combines proper training, nutrition, recovery, and mindset. This article will explore key concepts that will help you achieve your fitness goals more effectively.
+                </p>
+
+                <h3 class="text-warning mb-3 mt-5">Key Principles</h3>
+                <p class="text-light">
+                  Success in fitness comes from consistency and dedication. Here are the fundamental principles that guide our training philosophy:
+                </p>
+                <ul class="text-light">
+                  <li class="mb-2">Progressive overload - Gradually increasing the demands on your body</li>
+                  <li class="mb-2">Proper form and technique - Preventing injuries while maximizing results</li>
+                  <li class="mb-2">Adequate recovery - Allowing your body to repair and grow stronger</li>
+                  <li class="mb-2">Balanced nutrition - Fueling your workouts and supporting recovery</li>
+                  <li class="mb-2">Consistency over intensity - Building sustainable habits</li>
+                </ul>
+
+                <h3 class="text-warning mb-3 mt-5">Getting Started</h3>
+                <p class="text-light">
+                  If you're new to fitness, the most important thing is to start where you are and progress gradually. Don't compare yourself to others - everyone's fitness journey is unique. Our certified trainers at FitGym can help you create a personalized plan that matches your current fitness level and goals.
+                </p>
+                <div class="alert alert-warning mt-4">
+                  <i class="bi bi-lightbulb"></i> <strong>Pro Tip:</strong> Schedule your workouts like important appointments. Consistency is the key to seeing results!
+                </div>
+
+                <h3 class="text-warning mb-3 mt-5">Nutrition and Recovery</h3>
+                <p class="text-light">
+                  Your workouts are only one part of the equation. Proper nutrition and adequate recovery are equally important for achieving your fitness goals. Make sure to:
+                </p>
+                <ul class="text-light">
+                  <li class="mb-2">Eat a balanced diet with adequate protein for muscle recovery</li>
+                  <li class="mb-2">Stay hydrated throughout the day</li>
+                  <li class="mb-2">Get 7-9 hours of quality sleep each night</li>
+                  <li class="mb-2">Include rest days in your training schedule</li>
+                  <li class="mb-2">Listen to your body and avoid overtraining</li>
+                </ul>
+
+                <h3 class="text-warning mb-3 mt-5">Conclusion</h3>
+                <p class="text-light">
+                  Remember, fitness is a lifelong journey, not a destination. Focus on progress, not perfection. Celebrate your victories, learn from setbacks, and keep moving forward. At FitGym, we're here to support you every step of the way.
+                </p>
+                <p class="text-light">
+                  Ready to start your transformation? Join us at FitGym and experience the difference that expert guidance, state-of-the-art facilities, and a supportive community can make in your fitness journey.
+                </p>
+              </div>
+
+              <!-- Share Section -->
+              <div class="mt-5 pt-4 border-top border-warning">
+                <h5 class="text-warning mb-3">Share This Article</h5>
+                <div class="d-flex gap-2">
+                  <button class="btn btn-outline-warning"><i class="bi bi-facebook"></i> Facebook</button>
+                  <button class="btn btn-outline-warning"><i class="bi bi-twitter-x"></i> Twitter</button>
+                  <button class="btn btn-outline-warning"><i class="bi bi-linkedin"></i> LinkedIn</button>
+                  <button class="btn btn-outline-warning"><i class="bi bi-envelope"></i> Email</button>
+                </div>
+              </div>
+
+              <!-- Related Posts Section -->
+              <div class="mt-5">
+                <h3 class="text-warning mb-4">Related Articles</h3>
+                <div class="row g-3">
+                  <div class="col-md-4">
+                    <div class="card bg-dark border-warning h-100">
+                      <div class="card-body">
+                        <span class="badge bg-warning text-dark mb-2">Workout Tips</span>
+                        <h6 class="card-title text-warning">Beginner's Guide to Strength Training</h6>
+                        <p class="card-text text-light small">Essential tips for starting your strength training journey.</p>
+                        <a href="blog.html" class="btn btn-outline-warning btn-sm">Read More</a>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-4">
+                    <div class="card bg-dark border-warning h-100">
+                      <div class="card-body">
+                        <span class="badge bg-warning text-dark mb-2">Nutrition</span>
+                        <h6 class="card-title text-warning">Pre and Post Workout Meals</h6>
+                        <p class="card-text text-light small">What to eat before and after your workout for best results.</p>
+                        <a href="blog.html" class="btn btn-outline-warning btn-sm">Read More</a>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-4">
+                    <div class="card bg-dark border-warning h-100">
+                      <div class="card-body">
+                        <span class="badge bg-warning text-dark mb-2">Wellness</span>
+                        <h6 class="card-title text-warning">Importance of Rest and Recovery</h6>
+                        <p class="card-text text-light small">Why recovery is just as important as training.</p>
+                        <a href="blog.html" class="btn btn-outline-warning btn-sm">Read More</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Sidebar -->
+        <div class="col-lg-4">
+          <!-- Search Box -->
+          <div class="card bg-secondary border-warning mb-4">
+            <div class="card-body">
+              <h5 class="card-title text-warning mb-3">Search Blog</h5>
+              <div class="input-group">
+                <input type="text" class="form-control" placeholder="Search articles...">
+                <button class="btn btn-warning" type="button"><i class="bi bi-search"></i></button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Categories -->
+          <div class="card bg-secondary border-warning mb-4">
+            <div class="card-header bg-warning text-dark">
+              <h5 class="mb-0">Categories</h5>
+            </div>
+            <div class="list-group list-group-flush">
+              <a href="blog.html" class="list-group-item list-group-item-action bg-dark text-light border-warning">
+                Workout Tips <span class="badge bg-warning text-dark float-end">12</span>
+              </a>
+              <a href="blog.html" class="list-group-item list-group-item-action bg-dark text-light border-warning">
+                Nutrition <span class="badge bg-warning text-dark float-end">8</span>
+              </a>
+              <a href="blog.html" class="list-group-item list-group-item-action bg-dark text-light border-warning">
+                Fitness Lifestyle <span class="badge bg-warning text-dark float-end">10</span>
+              </a>
+              <a href="blog.html" class="list-group-item list-group-item-action bg-dark text-light border-warning">
+                Wellness <span class="badge bg-warning text-dark float-end">6</span>
+              </a>
+              <a href="blog.html" class="list-group-item list-group-item-action bg-dark text-light border-warning">
+                Success Stories <span class="badge bg-warning text-dark float-end">15</span>
+              </a>
+            </div>
+          </div>
+
+          <!-- Popular Posts -->
+          <div class="card bg-secondary border-warning sticky-top" style="top: 20px;">
+            <div class="card-header bg-warning text-dark">
+              <h5 class="mb-0">Popular Posts</h5>
+            </div>
+            <div class="card-body">
+              <div id="popularPosts">
+                <!-- Popular posts will be loaded here by JavaScript -->
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- End Blog Details Section -->
+
+  <!-- Start Footer -->
+  <footer class="bg-dark text-light border-top border-warning pt-5">
+    <div class="container">
+      <div class="row g-4">
+        <div class="col-md-4">
+          <a class="navbar-brand text-warning fw-bold text-decoration-none d-flex align-items-center" href="index.html">
+            <img src="../assets/media/logo.png" width="40" height="40" alt="FitGym Logo" class="me-2">
+            FitGym
+          </a>
+          <p class="text-light mt-3">Achieve your health and fitness goals with expert training, modern equipment, and a supportive community.</p>
+        </div>
+        <div class="col-md-4">
+          <h5 class="text-warning mb-3">Quick Links</h5>
+          <ul class="nav flex-column">
+            <li class="nav-item mb-2"><a href="privacy.html" class="nav-link p-0 text-light">Privacy Policy</a></li>
+            <li class="nav-item mb-2"><a href="terms.html" class="nav-link p-0 text-light">Terms & Conditions</a></li>
+            <li class="nav-item mb-2"><a href="refund.html" class="nav-link p-0 text-light">Refund Policy</a></li>
+          </ul>
+        </div>
+        <div class="col-md-4">
+          <h5 class="text-warning mb-3">Stay Updated</h5>
+          <p class="text-light">Subscribe to our newsletter for fitness tips, class updates, and special offers.</p>
+          <form class="mt-3">
+            <div class="input-group">
+              <input type="email" class="form-control" placeholder="Email address" aria-label="Email address">
+              <button class="btn btn-warning" type="button">Subscribe</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+    <div class="bg-warning text-dark text-center py-3 mt-5">
+      <p class="mb-0">© 2025 FitGym. All rights reserved.</p>
+    </div>
+  </footer>
+  <!-- End Footer -->
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
   <script src="../assets/js/site-data.js"></script>

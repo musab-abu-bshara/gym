@@ -321,6 +321,56 @@ function populateAllBlogPosts() {
   });
 }
 
+// Function to filter classes by category
+let currentFilter = 'all';
+
+function filterClasses(category) {
+  currentFilter = category;
+  const container = document.getElementById('classesGrid');
+  if (!container) return;
+
+  // Clear existing content
+  container.innerHTML = '';
+
+  // Filter classes based on category
+  const filteredClasses = category === 'all' 
+    ? classes 
+    : classes.filter(classItem => classItem.category === category);
+
+  // Populate filtered classes
+  filteredClasses.forEach(classItem => {
+    const col = document.createElement('div');
+    col.className = 'col-md-6 col-lg-4';
+    col.innerHTML = `
+      <div class="card bg-dark border-warning h-100">
+        <div class="card-body">
+          <span class="badge bg-warning text-dark mb-2">${classItem.category}</span>
+          <h5 class="card-title text-warning">${classItem.name}</h5>
+          <p class="text-light mb-2"><i class="bi bi-clock"></i> ${classItem.duration} | <i class="bi bi-bar-chart"></i> ${classItem.level}</p>
+          <p class="text-light mb-2"><i class="bi bi-person"></i> ${classItem.trainer}</p>
+          <p class="card-text text-light">${classItem.description}</p>
+          <p class="text-light small"><i class="bi bi-calendar"></i> ${classItem.schedule}</p>
+          <a href="service-details.html?id=${classItem.id}" class="btn btn-outline-warning mt-2">View Details</a>
+        </div>
+      </div>
+    `;
+    container.appendChild(col);
+  });
+
+  // Update button states
+  const filterButtons = document.querySelectorAll('.btn[onclick^="filterClasses"]');
+  filterButtons.forEach(button => {
+    const btnCategory = button.getAttribute('onclick').match(/'([^']+)'/)[1];
+    if (btnCategory === category) {
+      button.classList.remove('btn-outline-warning');
+      button.classList.add('btn-warning');
+    } else {
+      button.classList.remove('btn-warning');
+      button.classList.add('btn-outline-warning');
+    }
+  });
+}
+
 // Initialize page-specific functions when DOM is loaded
 document.addEventListener("DOMContentLoaded", function () {
   // Home page

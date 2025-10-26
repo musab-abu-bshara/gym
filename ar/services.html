@@ -1,16 +1,176 @@
 <!doctype html>
-<html lang="ar">
+<html lang="ar" dir="rtl">
 
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>فت جيم | حصصنا وبرامجنا</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.rtl.min.css" rel="stylesheet">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
 </head>
 
-<body>
+<body class="bg-dark text-light">
 
-  <!-- Content placeholder -->
+  <!-- Start Top Bar -->
+  <header class="bg-warning text-dark py-2">
+    <div class="container d-flex justify-content-between align-items-center flex-wrap">
+      <div class="d-flex gap-3">
+        <span><i class="bi bi-telephone-fill"></i> 4567 123 50 966+</span>
+        <span><i class="bi bi-envelope-fill"></i> info@fitgym.com</span>
+      </div>
+      <div class="d-flex gap-3">
+        <a href="#" class="text-dark"><i class="bi bi-facebook"></i></a>
+        <a href="#" class="text-dark"><i class="bi bi-instagram"></i></a>
+        <a href="#" class="text-dark"><i class="bi bi-twitter-x"></i></a>
+      </div>
+    </div>
+  </header>
+  <!-- End Top Bar -->
+
+  <!-- Start Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark border-bottom border-warning">
+    <div class="container">
+      <a class="navbar-brand text-warning fw-bold" href="index.html">
+        <img src="../assets/media/logo.png" width="40" height="40" alt="شعار فت جيم">
+        فت جيم
+      </a>
+
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item"><a class="nav-link" href="index.html">الرئيسية</a></li>
+          <li class="nav-item"><a class="nav-link active" href="services.html">الحصص</a></li>
+          <li class="nav-item"><a class="nav-link" href="portfolio.html">التحولات</a></li>
+          <li class="nav-item"><a class="nav-link" href="blog.html">المدونة</a></li>
+          <li class="nav-item"><a class="nav-link" href="about.html">من نحن</a></li>
+          <li class="nav-item"><a class="nav-link" href="contact.html">اتصل بنا</a></li>
+        </ul>
+
+        <div class="d-flex gap-2">
+          <a href="../en/services.html" class="btn btn-outline-warning">English</a>
+          <button class="btn btn-warning" data-bs-toggle="modal" data-bs-target="#membershipModal">
+            احصل على العضوية
+          </button>
+
+          <div class="modal fade" id="membershipModal" tabindex="-1" data-bs-theme="dark"
+            aria-labelledby="membershipModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h1 class="modal-title fs-5 text-light" id="membershipModalLabel">احصل على عضويتك</h1>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="إغلاق"></button>
+                </div>
+                <div class="modal-body">
+                  <form>
+                    <div class="mb-3">
+                      <input type="text" class="form-control" placeholder="الاسم الكامل" required>
+                    </div>
+                    <div class="mb-3">
+                      <input type="email" class="form-control" placeholder="البريد الإلكتروني" required>
+                    </div>
+                    <div class="mb-3">
+                      <input type="tel" class="form-control" placeholder="رقم الهاتف" required>
+                    </div>
+                    <div class="mb-3">
+                      <select class="form-select" aria-label="نوع العضوية">
+                        <option selected>اختر نوع العضوية</option>
+                        <option value="monthly">عضوية شهرية</option>
+                        <option value="quarterly">عضوية ربع سنوية</option>
+                        <option value="annual">عضوية سنوية</option>
+                        <option value="personal">باقة تدريب شخصي</option>
+                      </select>
+                    </div>
+                    <div class="mb-3">
+                      <textarea class="form-control" rows="3" placeholder="الرسالة (اختياري)"></textarea>
+                    </div>
+                  </form>
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-warning w-100">إرسال الاستفسار</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </nav>
+  <!-- End Navbar -->
+
+  <!-- Start Page Header -->
+  <section class="py-5 bg-secondary">
+    <div class="container text-center">
+      <h1 class="display-4 fw-bold text-warning mb-3">حصصنا وبرامجنا</h1>
+      <p class="lead text-light">اختر التمرين المثالي لأهدافك</p>
+    </div>
+  </section>
+  <!-- End Page Header -->
+
+  <!-- Start Filter Section -->
+  <section class="py-4 bg-dark">
+    <div class="container">
+      <div class="d-flex justify-content-center gap-2 flex-wrap">
+        <button class="btn btn-warning" onclick="filterClasses('all')">الكل</button>
+        <button class="btn btn-outline-warning" onclick="filterClasses('Strength')">القوة</button>
+        <button class="btn btn-outline-warning" onclick="filterClasses('Cardio')">الكارديو</button>
+        <button class="btn btn-outline-warning" onclick="filterClasses('Yoga')">اليوغا</button>
+        <button class="btn btn-outline-warning" onclick="filterClasses('Dance')">الرقص</button>
+        <button class="btn btn-outline-warning" onclick="filterClasses('Personal')">شخصي</button>
+      </div>
+    </div>
+  </section>
+  <!-- End Filter Section -->
+
+  <!-- Start Classes Grid -->
+  <section class="py-5 bg-dark">
+    <div class="container">
+      <div class="row g-4" id="classesGrid">
+        <!-- Classes will be populated by JavaScript from site-data.js -->
+      </div>
+    </div>
+  </section>
+  <!-- End Classes Grid -->
+
+  <!-- Start Footer -->
+  <footer class="bg-dark text-light border-top border-warning pt-5">
+    <div class="container">
+      <div class="row g-4">
+        <div class="col-md-4">
+          <a class="navbar-brand text-warning fw-bold text-decoration-none d-flex align-items-center" href="index.html">
+            <img src="../assets/media/logo.png" width="40" height="40" alt="شعار فت جيم" class="me-2">
+            فت جيم
+          </a>
+          <p class="text-light mt-3">حقق أهدافك الصحية واللياقة البدنية مع التدريب الخبير والمعدات الحديثة والمجتمع الداعم.</p>
+        </div>
+        <div class="col-md-4">
+          <h5 class="text-warning mb-3">روابط سريعة</h5>
+          <ul class="nav flex-column">
+            <li class="nav-item mb-2"><a href="privacy.html" class="nav-link p-0 text-light">سياسة الخصوصية</a></li>
+            <li class="nav-item mb-2"><a href="terms.html" class="nav-link p-0 text-light">الشروط والأحكام</a></li>
+            <li class="nav-item mb-2"><a href="refund.html" class="nav-link p-0 text-light">سياسة الاسترداد</a></li>
+          </ul>
+        </div>
+        <div class="col-md-4">
+          <h5 class="text-warning mb-3">ابق على اطلاع</h5>
+          <p class="text-light">اشترك في نشرتنا الإخبارية للحصول على نصائح اللياقة وتحديثات الحصص والعروض الخاصة.</p>
+          <form class="mt-3">
+            <div class="input-group">
+              <input type="email" class="form-control" placeholder="البريد الإلكتروني" aria-label="البريد الإلكتروني">
+              <button class="btn btn-warning" type="button">اشترك</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+    <div class="bg-warning text-dark text-center py-3 mt-5">
+      <p class="mb-0">© 2025 فت جيم. جميع الحقوق محفوظة.</p>
+    </div>
+  </footer>
+  <!-- End Footer -->
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
   <script src="../assets/js/site-data.js"></script>

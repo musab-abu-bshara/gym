@@ -322,25 +322,26 @@ function populateAllBlogPosts() {
 }
 
 // Function to filter classes by category
-let currentFilter = 'all';
+let currentFilter = "all";
 
 function filterClasses(category) {
   currentFilter = category;
-  const container = document.getElementById('classesGrid');
+  const container = document.getElementById("classesGrid");
   if (!container) return;
 
   // Clear existing content
-  container.innerHTML = '';
+  container.innerHTML = "";
 
   // Filter classes based on category
-  const filteredClasses = category === 'all' 
-    ? classes 
-    : classes.filter(classItem => classItem.category === category);
+  const filteredClasses =
+    category === "all"
+      ? classes
+      : classes.filter((classItem) => classItem.category === category);
 
   // Populate filtered classes
-  filteredClasses.forEach(classItem => {
-    const col = document.createElement('div');
-    col.className = 'col-md-6 col-lg-4';
+  filteredClasses.forEach((classItem) => {
+    const col = document.createElement("div");
+    col.className = "col-md-6 col-lg-4";
     col.innerHTML = `
       <div class="card bg-dark border-warning h-100">
         <div class="card-body">
@@ -358,7 +359,58 @@ function filterClasses(category) {
   });
 
   // Update button states
-  const filterButtons = document.querySelectorAll('.btn[onclick^="filterClasses"]');
+  const filterButtons = document.querySelectorAll(
+    '.btn[onclick^="filterClasses"]'
+  );
+  filterButtons.forEach((button) => {
+    const btnCategory = button.getAttribute("onclick").match(/'([^']+)'/)[1];
+    if (btnCategory === category) {
+      button.classList.remove("btn-outline-warning");
+      button.classList.add("btn-warning");
+    } else {
+      button.classList.remove("btn-warning");
+      button.classList.add("btn-outline-warning");
+    }
+  });
+}
+
+// Function to filter transformations by category
+let currentTransformationFilter = 'all';
+
+function filterTransformations(category) {
+  currentTransformationFilter = category;
+  const container = document.getElementById('transformationsGrid');
+  if (!container) return;
+
+  // Clear existing content
+  container.innerHTML = '';
+
+  // Filter transformations based on category
+  const filteredTransformations = category === 'all' 
+    ? transformations 
+    : transformations.filter(transformation => transformation.category === category);
+
+  // Populate filtered transformations
+  filteredTransformations.forEach(transformation => {
+    const col = document.createElement('div');
+    col.className = 'col-md-6 col-lg-3';
+    col.innerHTML = `
+      <div class="card bg-dark border-warning h-100">
+        <div class="card-body">
+          <i class="bi bi-person-badge display-1 text-warning mb-3 d-block text-center"></i>
+          <h5 class="card-title text-warning">${transformation.name}</h5>
+          <p class="text-light"><span class="badge bg-warning text-dark">${transformation.category}</span></p>
+          <p class="text-light">${transformation.weightLost || transformation.muscleGained || transformation.achievement}</p>
+          <p class="small text-light mb-2">${transformation.duration}</p>
+          <p class="card-text text-light small">${transformation.story}</p>
+        </div>
+      </div>
+    `;
+    container.appendChild(col);
+  });
+
+  // Update button states
+  const filterButtons = document.querySelectorAll('.btn[onclick^="filterTransformations"]');
   filterButtons.forEach(button => {
     const btnCategory = button.getAttribute('onclick').match(/'([^']+)'/)[1];
     if (btnCategory === category) {

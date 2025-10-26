@@ -1,16 +1,411 @@
 <!doctype html>
-<html lang="ar">
+<html lang="ar" dir="rtl">
 
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>FitGym | الشروط والأحكام</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.rtl.min.css" rel="stylesheet">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
 </head>
 
-<body>
+<body class="bg-dark text-light">
 
-  <!-- Content placeholder -->
+  <!-- Start Top Bar -->
+  <header class="bg-warning text-dark py-2">
+    <div class="container d-flex justify-content-between align-items-center flex-wrap">
+      <div class="d-flex gap-3">
+        <span><i class="bi bi-telephone-fill"></i> +966 50 123 4567</span>
+        <span><i class="bi bi-envelope-fill"></i> info@fitgym.com</span>
+      </div>
+      <div class="d-flex gap-3">
+        <a href="#" class="text-dark"><i class="bi bi-facebook"></i></a>
+        <a href="#" class="text-dark"><i class="bi bi-instagram"></i></a>
+        <a href="#" class="text-dark"><i class="bi bi-twitter-x"></i></a>
+      </div>
+    </div>
+  </header>
+  <!-- End Top Bar -->
+
+  <!-- Start Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark border-bottom border-warning">
+    <div class="container">
+      <a class="navbar-brand text-warning fw-bold" href="index.html">
+        <img src="../assets/media/logo.png" width="40" height="40" alt="FitGym Logo">
+        FitGym
+      </a>
+
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item"><a class="nav-link" href="index.html">الرئيسية</a></li>
+          <li class="nav-item"><a class="nav-link" href="services.html">الصفوف</a></li>
+          <li class="nav-item"><a class="nav-link" href="portfolio.html">التحولات</a></li>
+          <li class="nav-item"><a class="nav-link" href="blog.html">المدونة</a></li>
+          <li class="nav-item"><a class="nav-link" href="about.html">من نحن</a></li>
+          <li class="nav-item"><a class="nav-link" href="contact.html">اتصل بنا</a></li>
+        </ul>
+
+        <div class="d-flex gap-2">
+          <a href="../en/terms.html" class="btn btn-outline-warning">English</a>
+          <button class="btn btn-warning" data-bs-toggle="modal" data-bs-target="#membershipModal">
+            احصل على العضوية
+          </button>
+
+          <div class="modal fade" id="membershipModal" tabindex="-1" data-bs-theme="dark"
+            aria-labelledby="membershipModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h1 class="modal-title fs-5 text-light" id="membershipModalLabel">احصل على عضويتك</h1>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                  <form>
+                    <div class="mb-3">
+                      <input type="text" class="form-control" placeholder="الاسم الكامل" required>
+                    </div>
+                    <div class="mb-3">
+                      <input type="email" class="form-control" placeholder="البريد الإلكتروني" required>
+                    </div>
+                    <div class="mb-3">
+                      <input type="tel" class="form-control" placeholder="رقم الهاتف" required>
+                    </div>
+                    <div class="mb-3">
+                      <select class="form-select" aria-label="نوع العضوية">
+                        <option selected>اختر نوع العضوية</option>
+                        <option value="monthly">عضوية شهرية</option>
+                        <option value="quarterly">عضوية ربع سنوية</option>
+                        <option value="annual">عضوية سنوية</option>
+                        <option value="personal">باقة تدريب شخصي</option>
+                      </select>
+                    </div>
+                    <div class="mb-3">
+                      <textarea class="form-control" rows="3" placeholder="رسالة (اختياري)"></textarea>
+                    </div>
+                  </form>
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-warning w-100">إرسال الاستفسار</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </nav>
+  <!-- End Navbar -->
+
+  <!-- Start Page Header -->
+  <section class="py-5 bg-secondary">
+    <div class="container text-center">
+      <h1 class="display-4 fw-bold text-warning mb-3">الشروط والأحكام</h1>
+      <p class="lead text-light">آخر تحديث: 26 أكتوبر 2025</p>
+    </div>
+  </section>
+  <!-- End Page Header -->
+
+  <!-- Start Terms Content -->
+  <section class="py-5 bg-dark">
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-lg-10">
+          <div class="mb-5">
+            <p class="text-light lead">
+              مرحباً بك في FitGym. باستخدام مرافقنا وخدماتنا، فإنك توافق على الشروط والأحكام التالية. يرجى قراءتها
+              بعناية.
+            </p>
+          </div>
+
+          <div class="accordion" id="termsAccordion" data-bs-theme="dark">
+            <!-- Membership Agreement -->
+            <div class="accordion-item bg-secondary border-warning mb-3">
+              <h2 class="accordion-header">
+                <button class="accordion-button bg-secondary text-warning" type="button" data-bs-toggle="collapse"
+                  data-bs-target="#section1">
+                  1. اتفاقية العضوية
+                </button>
+              </h2>
+              <div id="section1" class="accordion-collapse collapse show" data-bs-parent="#termsAccordion">
+                <div class="accordion-body text-light">
+                  <h6 class="text-warning">أنواع العضوية</h6>
+                  <p>نحن نقدم أنواع عضوية متنوعة:</p>
+                  <ul>
+                    <li><strong>العضوية الشهرية:</strong> تجدد تلقائياً كل شهر</li>
+                    <li><strong>العضوية ربع السنوية:</strong> التزام لمدة 3 أشهر مع خصم على السعر</li>
+                    <li><strong>العضوية السنوية:</strong> التزام لمدة 12 شهراً مع أفضل قيمة</li>
+                    <li><strong>باقات التدريب الشخصي:</strong> عدد محدد من الجلسات مع مدرب معتمد</li>
+                  </ul>
+
+                  <h6 class="text-warning mt-3">مدة العضوية</h6>
+                  <p>تبدأ عضويتك من تاريخ التسجيل وتجدد تلقائياً ما لم يتم إلغاؤها وفقاً لسياسة الإلغاء الخاصة بنا.
+                    تنتهي الباقات (التدريب الشخصي، الصفوف) بعد فترة الصلاحية ما لم يتم تجديدها.</p>
+
+                  <h6 class="text-warning mt-3">متطلبات السن</h6>
+                  <p>يجب أن يكون عمر الأعضاء 18 عاماً أو أكثر. يجب على الأعضاء الذين تتراوح أعمارهم بين 16-17 عاماً
+                    الحصول على موافقة الوالدين ويجب أن يكونوا مصحوبين ببالغ أثناء استخدام المرافق.</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Payment Terms -->
+            <div class="accordion-item bg-secondary border-warning mb-3">
+              <h2 class="accordion-header">
+                <button class="accordion-button collapsed bg-secondary text-warning" type="button"
+                  data-bs-toggle="collapse" data-bs-target="#section2">
+                  2. شروط الدفع
+                </button>
+              </h2>
+              <div id="section2" class="accordion-collapse collapse" data-bs-parent="#termsAccordion">
+                <div class="accordion-body text-light">
+                  <h6 class="text-warning">طرق الدفع</h6>
+                  <p>نقبل بطاقات الائتمان والخصم والتحويل البنكي والدفع النقدي. رسوم العضوية مستحقة في بداية كل فترة
+                    إصدار الفاتورة.</p>
+
+                  <h6 class="text-warning mt-3">الرسوم والمصاريف</h6>
+                  <ul>
+                    <li>رسوم العضوية مستحقة الدفع قبل الوصول إلى المرافق</li>
+                    <li>رسوم التسجيل لمرة واحدة تنطبق على العضويات الجديدة</li>
+                    <li>قد يتم تطبيق رسوم إضافية على الخدمات المتخصصة (التدريب الشخصي، المواد التعليمية، إلخ.)</li>
+                    <li>جميع الأسعار شاملة ضريبة القيمة المضافة ما لم ينص على خلاف ذلك</li>
+                  </ul>
+
+                  <h6 class="text-warning mt-3">المدفوعات المتأخرة</h6>
+                  <p>قد تؤدي الدفعات المتأخرة إلى تعليق حسابك حتى يصبح الرصيد محدثاً. قد يتم تطبيق رسوم متأخرة بعد 5
+                    أيام من تاريخ الاستحقاق.</p>
+
+                  <h6 class="text-warning mt-3">تغييرات الأسعار</h6>
+                  <p>نحتفظ بالحق في تغيير رسوم العضوية بإشعار مدته 30 يوماً. سيتم إخطار الأعضاء الحاليين قبل أي تغييرات
+                    في الأسعار.</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Gym Rules -->
+            <div class="accordion-item bg-secondary border-warning mb-3">
+              <h2 class="accordion-header">
+                <button class="accordion-button collapsed bg-secondary text-warning" type="button"
+                  data-bs-toggle="collapse" data-bs-target="#section3">
+                  3. قواعد النادي الرياضي
+                </button>
+              </h2>
+              <div id="section3" class="accordion-collapse collapse" data-bs-parent="#termsAccordion">
+                <div class="accordion-body text-light">
+                  <h6 class="text-warning">السلوك والآداب</h6>
+                  <ul>
+                    <li>تعامل مع جميع الأعضاء والموظفين بالاحترام والكياسة</li>
+                    <li>استخدم سماعات الرأس للموسيقى أو المحتوى الصوتي</li>
+                    <li>الصراخ المفرط أو إسقاط الأوزان أمر محظور</li>
+                    <li>أعد جميع المعدات إلى المواقع المناسبة بعد الاستخدام</li>
+                    <li>امسح المعدات بعد كل استخدام</li>
+                  </ul>
+
+                  <h6 class="text-warning mt-3">استخدام المعدات</h6>
+                  <ul>
+                    <li>احترم حدود الوقت على المعدات خلال ساعات الذروة</li>
+                    <li>اطلب المساعدة من الموظفين إذا لم تكن متأكداً من استخدام المعدات</li>
+                    <li>أبلغ عن أي معدات معطلة أو غير آمنة على الفور</li>
+                    <li>لا تحتكر المعدات أو المناطق خلال فترات الازدحام</li>
+                  </ul>
+
+                  <h6 class="text-warning mt-3">قواعد اللباس</h6>
+                  <ul>
+                    <li>يجب ارتداء أحذية رياضية مناسبة ومغلقة من الأمام في جميع الأوقات</li>
+                    <li>يجب أن تكون الملابس مناسبة للياقة البدنية ونظيفة</li>
+                    <li>يُطلب ارتداء قمصان في جميع المناطق</li>
+                  </ul>
+
+                  <h6 class="text-warning mt-3">العناصر المحظورة</h6>
+                  <p>الكحول والمخدرات والأسلحة والتدخين محظور في جميع أنحاء المنشأة.</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Health & Safety -->
+            <div class="accordion-item bg-secondary border-warning mb-3">
+              <h2 class="accordion-header">
+                <button class="accordion-button collapsed bg-secondary text-warning" type="button"
+                  data-bs-toggle="collapse" data-bs-target="#section4">
+                  4. الصحة والسلامة
+                </button>
+              </h2>
+              <div id="section4" class="accordion-collapse collapse" data-bs-parent="#termsAccordion">
+                <div class="accordion-body text-light">
+                  <h6 class="text-warning">التخليص الطبي</h6>
+                  <p>يجب على الأعضاء الذين يعانون من حالات طبية موجودة مسبقاً الحصول على تصريح طبي قبل استخدام المرافق.
+                    استشر مقدم الرعاية الصحية الخاص بك قبل البدء في أي برنامج تمرين جديد.</p>
+
+                  <h6 class="text-warning mt-3">استبيان الصحة</h6>
+                  <p>يجب على جميع الأعضاء إكمال استبيان صحي عند التسجيل. يرجى إبلاغ الموظفين بأي تغييرات في صحتك.</p>
+
+                  <h6 class="text-warning mt-3">افتراض المخاطر</h6>
+                  <p>أنت تدرك أن النشاط البدني ينطوي على مخاطر متأصلة. أنت تشارك في أنشطة النادي الرياضي على مسؤوليتك
+                    الخاصة.</p>
+
+                  <h6 class="text-warning mt-3">إجراءات الطوارئ</h6>
+                  <p>الموظفون مدربون على الإسعافات الأولية والإنعاش القلبي الرئوي. أجهزة مزيل الرجفان الخارجي الآلي
+                    (AED) متوفرة في الموقع. أبلغ الموظفين فوراً في حالة الطوارئ الطبية.</p>
+
+                  <h6 class="text-warning mt-3">سياسة المرض</h6>
+                  <p>لا تستخدم المنشأة إذا كنت تعاني من حمى أو مرض معدٍ أو تشعر بتوعك. هذا يساعد على حماية الأعضاء
+                    والموظفين الآخرين.</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Cancellation -->
+            <div class="accordion-item bg-secondary border-warning mb-3">
+              <h2 class="accordion-header">
+                <button class="accordion-button collapsed bg-secondary text-warning" type="button"
+                  data-bs-toggle="collapse" data-bs-target="#section5">
+                  5. الإلغاء والتعليق
+                </button>
+              </h2>
+              <div id="section5" class="accordion-collapse collapse" data-bs-parent="#termsAccordion">
+                <div class="accordion-body text-light">
+                  <h6 class="text-warning">فترات الإشعار</h6>
+                  <ul>
+                    <li><strong>العضوية الشهرية:</strong> إشعار قبل 30 يوماً مطلوب</li>
+                    <li><strong>العضوية ربع السنوية:</strong> إشعار قبل 30 يوماً بعد الحد الأدنى من المدة</li>
+                    <li><strong>العضوية السنوية:</strong> إشعار قبل 60 يوماً بعد الحد الأدنى من المدة</li>
+                  </ul>
+
+                  <h6 class="text-warning mt-3">تجميد العضوية</h6>
+                  <p>يمكنك تجميد عضويتك لمدة تتراوح بين 1-3 أشهر لأسباب طبية أو السفر أو الظروف الشخصية. تنطبق رسوم
+                    تجميد صغيرة. يتم تمديد انتهاء العضوية بفترة التجميد.</p>
+
+                  <h6 class="text-warning mt-3">إنهاء مبكر</h6>
+                  <p>قد يتطلب الإنهاء المبكر للعضويات طويلة الأجل رسوم إلغاء. قد يتم التنازل عن هذه في الظروف الطبية أو
+                    إعادة التوطين (وثائق مطلوبة).</p>
+
+                  <h6 class="text-warning mt-3">الحق في التعليق</h6>
+                  <p>نحتفظ بالحق في تعليق أو إنهاء العضويات بسبب عدم الدفع أو انتهاك القواعد أو سوء السلوك.</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Liability -->
+            <div class="accordion-item bg-secondary border-warning mb-3">
+              <h2 class="accordion-header">
+                <button class="accordion-button collapsed bg-secondary text-warning" type="button"
+                  data-bs-toggle="collapse" data-bs-target="#section6">
+                  6. حدود المسؤولية
+                </button>
+              </h2>
+              <div id="section6" class="accordion-collapse collapse" data-bs-parent="#termsAccordion">
+                <div class="accordion-body text-light">
+                  <h6 class="text-warning">التنازل والإفراج</h6>
+                  <p>أنت تتنازل عن FitGym، وموظفيها، والمدربين من المسؤولية عن أي إصابات أو خسائر أو أضرار تحدث في
+                    المنشأة أو خلال المشاركة في أي أنشطة.</p>
+
+                  <h6 class="text-warning mt-3">الممتلكات الشخصية</h6>
+                  <p>FitGym ليست مسؤولة عن الممتلكات الشخصية المفقودة أو المسروقة أو التالفة. تتوفر خزائن قفل، لكن يجب
+                    على الأعضاء توفير أقفالهم الخاصة.</p>
+
+                  <h6 class="text-warning mt-3">التعويض</h6>
+                  <p>أنت توافق على تعويض FitGym ضد أي مطالبات أو إجراءات ناشئة عن استخدامك للمرافق.</p>
+
+                  <h6 class="text-warning mt-3">التأمين</h6>
+                  <p>نحتفظ بتأمين مسؤولية مناسب. نوصي الأعضاء بالتحقق من تغطية التأمين الصحي والإصابة الشخصية الخاصة
+                    بهم.</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Privacy -->
+            <div class="accordion-item bg-secondary border-warning mb-3">
+              <h2 class="accordion-header">
+                <button class="accordion-button collapsed bg-secondary text-warning" type="button"
+                  data-bs-toggle="collapse" data-bs-target="#section7">
+                  7. الخصوصية وحماية البيانات
+                </button>
+              </h2>
+              <div id="section7" class="accordion-collapse collapse" data-bs-parent="#termsAccordion">
+                <div class="accordion-body text-light">
+                  <p>نحن نأخذ خصوصيتك على محمل الجد. يرجى مراجعة <a href="privacy.html" class="text-warning">سياسة
+                      الخصوصية</a> الخاصة بنا للحصول على تفاصيل حول كيفية جمع واستخدام وحماية معلوماتك الشخصية.</p>
+
+                  <h6 class="text-warning mt-3">التحكم في الوصول</h6>
+                  <p>نستخدم أنظمة دخول ببطاقة رئيسية لأمان الأعضاء. لا تشارك بطاقة الوصول الخاصة بك مع غير الأعضاء.</p>
+
+                  <h6 class="text-warning mt-3">كاميرات الأمن</h6>
+                  <p>تعمل كاميرات المراقبة في المناطق العامة لأمان الأعضاء وحماية الممتلكات.</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Changes to Terms -->
+            <div class="accordion-item bg-secondary border-warning">
+              <h2 class="accordion-header">
+                <button class="accordion-button collapsed bg-secondary text-warning" type="button"
+                  data-bs-toggle="collapse" data-bs-target="#section8">
+                  8. التغييرات على الشروط
+                </button>
+              </h2>
+              <div id="section8" class="accordion-collapse collapse" data-bs-parent="#termsAccordion">
+                <div class="accordion-body text-light">
+                  <p>نحتفظ بالحق في تحديث هذه الشروط والأحكام في أي وقت. سيتم إخطار الأعضاء بالتغييرات الكبيرة عبر
+                    البريد الإلكتروني أو الملاحظات المنشورة. استمرار استخدام مرافقنا يشكل قبولاً للشروط المعدلة.</p>
+                  <p>لأية أسئلة أو مخاوف، يرجى الاتصال بنا على <a href="mailto:info@fitgym.com"
+                      class="text-warning">info@fitgym.com</a> أو +966 50 123 4567.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="alert alert-warning mt-5">
+            <i class="bi bi-info-circle"></i> <strong>ملاحظة مهمة:</strong> باستخدام FitGym، فإنك تقر بأنك قرأت وفهمت
+            ووافقت على جميع الشروط والأحكام الموضحة أعلاه.
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- End Terms Content -->
+
+  <!-- Start Footer -->
+  <footer class="bg-dark text-light border-top border-warning pt-5">
+    <div class="container">
+      <div class="row g-4">
+        <div class="col-md-4">
+          <a class="navbar-brand text-warning fw-bold text-decoration-none d-flex align-items-center" href="index.html">
+            <img src="../assets/media/logo.png" width="40" height="40" alt="FitGym Logo" class="me-2">
+            FitGym
+          </a>
+          <p class="text-light mt-3">حقق أهداف صحتك ولياقتك البدنية مع التدريب الخبير والمعدات الحديثة والمجتمع الداعم.
+          </p>
+        </div>
+        <div class="col-md-4">
+          <h5 class="text-warning mb-3">روابط سريعة</h5>
+          <ul class="nav flex-column">
+            <li class="nav-item mb-2"><a href="privacy.html" class="nav-link p-0 text-light">سياسة الخصوصية</a></li>
+            <li class="nav-item mb-2"><a href="terms.html" class="nav-link p-0 text-warning">الشروط والأحكام</a></li>
+            <li class="nav-item mb-2"><a href="refund.html" class="nav-link p-0 text-light">سياسة الاسترداد</a></li>
+          </ul>
+        </div>
+        <div class="col-md-4">
+          <h5 class="text-warning mb-3">ابق على اطلاع</h5>
+          <p class="text-light">اشترك في نشرتنا الإخبارية للحصول على نصائح اللياقة البدنية وتحديثات الصفوف والعروض
+            الخاصة.</p>
+          <form class="mt-3">
+            <div class="input-group">
+              <input type="email" class="form-control" placeholder="البريد الإلكتروني" aria-label="البريد الإلكتروني">
+              <button class="btn btn-warning" type="button">اشترك</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+    <div class="bg-warning text-dark text-center py-3 mt-5">
+      <p class="mb-0">© 2025 FitGym. جميع الحقوق محفوظة.</p>
+    </div>
+  </footer>
+  <!-- End Footer -->
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
   <script src="../assets/js/site-data.js"></script>

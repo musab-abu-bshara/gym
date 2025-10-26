@@ -4,13 +4,434 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>FitGym | Refund Policy</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
 </head>
 
-<body>
+<body class="bg-dark text-light">
 
-  <!-- Content placeholder -->
+  <!-- Start Top Bar -->
+  <header class="bg-warning text-dark py-2">
+    <div class="container d-flex justify-content-between align-items-center flex-wrap">
+      <div class="d-flex gap-3">
+        <span><i class="bi bi-telephone-fill"></i> +966 50 123 4567</span>
+        <span><i class="bi bi-envelope-fill"></i> info@fitgym.com</span>
+      </div>
+      <div class="d-flex gap-3">
+        <a href="#" class="text-dark"><i class="bi bi-facebook"></i></a>
+        <a href="#" class="text-dark"><i class="bi bi-instagram"></i></a>
+        <a href="#" class="text-dark"><i class="bi bi-twitter-x"></i></a>
+      </div>
+    </div>
+  </header>
+  <!-- End Top Bar -->
+
+  <!-- Start Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark border-bottom border-warning">
+    <div class="container">
+      <a class="navbar-brand text-warning fw-bold" href="index.html">
+        <img src="../assets/media/logo.png" width="40" height="40" alt="FitGym Logo">
+        FitGym
+      </a>
+
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="services.html">Classes</a></li>
+          <li class="nav-item"><a class="nav-link" href="portfolio.html">Transformations</a></li>
+          <li class="nav-item"><a class="nav-link" href="blog.html">Blog</a></li>
+          <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+        </ul>
+
+        <div class="d-flex gap-2">
+          <a href="../ar/refund.html" class="btn btn-outline-warning">العربية</a>
+          <button class="btn btn-warning" data-bs-toggle="modal" data-bs-target="#membershipModal">
+            Get Membership
+          </button>
+
+          <div class="modal fade" id="membershipModal" tabindex="-1" data-bs-theme="dark"
+            aria-labelledby="membershipModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h1 class="modal-title fs-5 text-light" id="membershipModalLabel">Get Your Membership</h1>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                  <form>
+                    <div class="mb-3">
+                      <input type="text" class="form-control" placeholder="Full Name" required>
+                    </div>
+                    <div class="mb-3">
+                      <input type="email" class="form-control" placeholder="Email Address" required>
+                    </div>
+                    <div class="mb-3">
+                      <input type="tel" class="form-control" placeholder="Phone Number" required>
+                    </div>
+                    <div class="mb-3">
+                      <select class="form-select" aria-label="Membership Type">
+                        <option selected>Select Membership Type</option>
+                        <option value="monthly">Monthly Membership</option>
+                        <option value="quarterly">Quarterly Membership</option>
+                        <option value="annual">Annual Membership</option>
+                        <option value="personal">Personal Training Package</option>
+                      </select>
+                    </div>
+                    <div class="mb-3">
+                      <textarea class="form-control" rows="3" placeholder="Message (Optional)"></textarea>
+                    </div>
+                  </form>
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-warning w-100">Submit Inquiry</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </nav>
+  <!-- End Navbar -->
+
+  <!-- Start Page Header -->
+  <section class="py-5 bg-secondary">
+    <div class="container text-center">
+      <h1 class="display-4 fw-bold text-warning mb-3">Refund Policy</h1>
+      <p class="lead text-light">Effective Date: October 26, 2025</p>
+    </div>
+  </section>
+  <!-- End Page Header -->
+
+  <!-- Start Refund Policy Content -->
+  <section class="py-5 bg-dark">
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-lg-10">
+          <div class="mb-5">
+            <p class="text-light lead">
+              At FitGym, we want you to be completely satisfied with your membership. This Refund Policy outlines the
+              conditions under which refunds may be issued.
+            </p>
+          </div>
+
+          <div class="accordion" id="refundAccordion" data-bs-theme="dark">
+            <!-- Membership Refunds -->
+            <div class="accordion-item bg-secondary border-warning mb-3">
+              <h2 class="accordion-header">
+                <button class="accordion-button bg-secondary text-warning" type="button" data-bs-toggle="collapse"
+                  data-bs-target="#refund1">
+                  1. Membership Refunds
+                </button>
+              </h2>
+              <div id="refund1" class="accordion-collapse collapse show" data-bs-parent="#refundAccordion">
+                <div class="accordion-body text-light">
+                  <h6 class="text-warning">7-Day Money-Back Guarantee:</h6>
+                  <p>If you're not satisfied with your membership within the first 7 days, we offer a full refund
+                    including the registration fee. This applies to all membership types.</p>
+                  <p><strong>Conditions:</strong></p>
+                  <ul>
+                    <li>Request must be made within 7 days of joining</li>
+                    <li>Membership card must be returned</li>
+                    <li>No outstanding balances</li>
+                  </ul>
+
+                  <h6 class="text-warning mt-4">After 7 Days:</h6>
+                  <p><strong>Monthly Memberships:</strong></p>
+                  <ul>
+                    <li>No refunds for partial months</li>
+                    <li>Must provide 30 days' notice to cancel</li>
+                    <li>Registration fee is non-refundable after 7 days</li>
+                  </ul>
+
+                  <p><strong>Quarterly Memberships (3 Months):</strong></p>
+                  <ul>
+                    <li>Prorated refund available after 7 days, minus 20% administrative fee</li>
+                    <li>Minimum usage of 1 month before refund eligibility</li>
+                    <li>Registration fee is non-refundable</li>
+                  </ul>
+
+                  <p><strong>Annual Memberships (12 Months):</strong></p>
+                  <ul>
+                    <li>Prorated refund available after 7 days, minus 25% administrative fee</li>
+                    <li>Minimum usage of 3 months before refund eligibility</li>
+                    <li>Registration fee is non-refundable</li>
+                    <li>Special promotional rates are non-refundable after 7 days</li>
+                  </ul>
+
+                  <h6 class="text-warning mt-4">Medical or Relocation Exceptions:</h6>
+                  <p>Full prorated refund (minus 10% administrative fee) available with documentation:</p>
+                  <ul>
+                    <li>Medical certificate preventing exercise for 90+ days</li>
+                    <li>Proof of relocation 50+ km from facility</li>
+                    <li>Must be submitted within 30 days of circumstance</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            <!-- Class Packages -->
+            <div class="accordion-item bg-secondary border-warning mb-3">
+              <h2 class="accordion-header">
+                <button class="accordion-button collapsed bg-secondary text-warning" type="button"
+                  data-bs-toggle="collapse" data-bs-target="#refund2">
+                  2. Class Package Refunds
+                </button>
+              </h2>
+              <div id="refund2" class="accordion-collapse collapse" data-bs-parent="#refundAccordion">
+                <div class="accordion-body text-light">
+                  <h6 class="text-warning">Unused Class Packages:</h6>
+                  <p>Class packages can be refunded within 30 days of purchase if:</p>
+                  <ul>
+                    <li>At least 50% of classes remain unused</li>
+                    <li>Refund amount: 50% of remaining class value</li>
+                    <li>Valid for 30 days from purchase date only</li>
+                  </ul>
+
+                  <h6 class="text-warning mt-4">After 30 Days:</h6>
+                  <ul>
+                    <li>No refunds available</li>
+                    <li>Classes remain valid until expiration date (typically 6 months)</li>
+                    <li>Cannot be transferred to another person</li>
+                  </ul>
+
+                  <h6 class="text-warning mt-4">Class Cancellations by FitGym:</h6>
+                  <p>If we cancel a class you've booked:</p>
+                  <ul>
+                    <li>Full credit to your account</li>
+                    <li>Can be used for any other class</li>
+                    <li>No expiration on credits from cancelled classes</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            <!-- Personal Training -->
+            <div class="accordion-item bg-secondary border-warning mb-3">
+              <h2 class="accordion-header">
+                <button class="accordion-button collapsed bg-secondary text-warning" type="button"
+                  data-bs-toggle="collapse" data-bs-target="#refund3">
+                  3. Personal Training Sessions
+                </button>
+              </h2>
+              <div id="refund3" class="accordion-collapse collapse" data-bs-parent="#refundAccordion">
+                <div class="accordion-body text-light">
+                  <h6 class="text-warning">Session Cancellation Policy:</h6>
+                  <p><strong>By Member:</strong></p>
+                  <ul>
+                    <li>24+ hours notice: Full credit, session retained</li>
+                    <li>Less than 24 hours: 50% charge applied</li>
+                    <li>No-show: Full session charged, no refund</li>
+                  </ul>
+
+                  <p><strong>By Trainer:</strong></p>
+                  <ul>
+                    <li>Full credit to your account</li>
+                    <li>Option to reschedule or refund</li>
+                  </ul>
+
+                  <h6 class="text-warning mt-4">Package Refunds:</h6>
+                  <ul>
+                    <li>Within 7 days of purchase: Full refund if no sessions used</li>
+                    <li>After 7 days: Prorated refund for unused sessions minus 15% fee</li>
+                    <li>Must have completed at least one session before package refund</li>
+                    <li>Discounted package rates are forfeited; refund based on regular single-session price</li>
+                  </ul>
+
+                  <h6 class="text-warning mt-4">Session Validity:</h6>
+                  <ul>
+                    <li>Personal training packages expire 6 months from purchase</li>
+                    <li>No refunds for expired sessions</li>
+                    <li>Extensions available with trainer approval for medical reasons</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            <!-- Merchandise -->
+            <div class="accordion-item bg-secondary border-warning mb-3">
+              <h2 class="accordion-header">
+                <button class="accordion-button collapsed bg-secondary text-warning" type="button"
+                  data-bs-toggle="collapse" data-bs-target="#refund4">
+                  4. Merchandise and Products
+                </button>
+              </h2>
+              <div id="refund4" class="accordion-collapse collapse" data-bs-parent="#refundAccordion">
+                <div class="accordion-body text-light">
+                  <h6 class="text-warning">14-Day Return Policy:</h6>
+                  <p>Merchandise purchased at FitGym can be returned within 14 days:</p>
+                  <ul>
+                    <li>Items must be unused and in original packaging</li>
+                    <li>Tags must be attached</li>
+                    <li>Original receipt required</li>
+                    <li>Full refund or store credit available</li>
+                  </ul>
+
+                  <h6 class="text-warning mt-4">Non-Returnable Items:</h6>
+                  <ul>
+                    <li>Supplements and nutritional products (unless sealed and unopened)</li>
+                    <li>Personal hygiene items</li>
+                    <li>Sale/clearance items (final sale)</li>
+                    <li>Custom-ordered products</li>
+                  </ul>
+
+                  <h6 class="text-warning mt-4">Defective Products:</h6>
+                  <p>Defective items can be exchanged or refunded at any time with proof of purchase.</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Refund Process -->
+            <div class="accordion-item bg-secondary border-warning mb-3">
+              <h2 class="accordion-header">
+                <button class="accordion-button collapsed bg-secondary text-warning" type="button"
+                  data-bs-toggle="collapse" data-bs-target="#refund5">
+                  5. How to Request a Refund
+                </button>
+              </h2>
+              <div id="refund5" class="accordion-collapse collapse" data-bs-parent="#refundAccordion">
+                <div class="accordion-body text-light">
+                  <h6 class="text-warning">Refund Request Process:</h6>
+                  <p><strong>Step 1: Submit Request</strong></p>
+                  <ul>
+                    <li>Email: <a href="mailto:refunds@fitgym.com" class="text-warning">refunds@fitgym.com</a></li>
+                    <li>In-person: Visit front desk with ID and membership card</li>
+                    <li>Phone: +966 50 123 4567</li>
+                  </ul>
+
+                  <p><strong>Step 2: Required Information</strong></p>
+                  <ul>
+                    <li>Full name and membership number</li>
+                    <li>Reason for refund request</li>
+                    <li>Original payment method details</li>
+                    <li>Supporting documentation (if applicable)</li>
+                  </ul>
+
+                  <p><strong>Step 3: Processing Time</strong></p>
+                  <ul>
+                    <li>Refund requests reviewed within 5 business days</li>
+                    <li>Approval notification sent via email</li>
+                    <li>Refunds processed within 7-14 business days</li>
+                    <li>Credited to original payment method</li>
+                  </ul>
+
+                  <h6 class="text-warning mt-4">Contact Information:</h6>
+                  <ul class="list-unstyled">
+                    <li><i class="bi bi-envelope text-warning"></i> Refunds Email: <a href="mailto:refunds@fitgym.com"
+                        class="text-warning">refunds@fitgym.com</a></li>
+                    <li><i class="bi bi-telephone text-warning"></i> Phone: +966 50 123 4567</li>
+                    <li><i class="bi bi-clock text-warning"></i> Hours: Mon-Fri, 9:00 AM - 6:00 PM</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            <!-- Payment Method -->
+            <div class="accordion-item bg-secondary border-warning mb-3">
+              <h2 class="accordion-header">
+                <button class="accordion-button collapsed bg-secondary text-warning" type="button"
+                  data-bs-toggle="collapse" data-bs-target="#refund6">
+                  6. Refund Payment Methods
+                </button>
+              </h2>
+              <div id="refund6" class="accordion-collapse collapse" data-bs-parent="#refundAccordion">
+                <div class="accordion-body text-light">
+                  <p>Refunds will be issued to the original payment method:</p>
+                  <ul>
+                    <li><strong>Credit/Debit Card:</strong> Refunded to same card (7-14 business days)</li>
+                    <li><strong>Bank Transfer:</strong> Refunded to original account (5-10 business days)</li>
+                    <li><strong>Cash Payment:</strong> Cash refund available at front desk or bank transfer</li>
+                  </ul>
+                  <p class="mt-3">If original payment method is no longer available, alternative arrangements can be
+                    made through our finance team.</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Special Circumstances -->
+            <div class="accordion-item bg-secondary border-warning">
+              <h2 class="accordion-header">
+                <button class="accordion-button collapsed bg-secondary text-warning" type="button"
+                  data-bs-toggle="collapse" data-bs-target="#refund7">
+                  7. Special Circumstances
+                </button>
+              </h2>
+              <div id="refund7" class="accordion-collapse collapse" data-bs-parent="#refundAccordion">
+                <div class="accordion-body text-light">
+                  <h6 class="text-warning">Extraordinary Situations:</h6>
+                  <p>We understand that exceptional circumstances may arise. Cases will be reviewed individually for:
+                  </p>
+                  <ul>
+                    <li>Serious injury or long-term illness</li>
+                    <li>Job loss or financial hardship</li>
+                    <li>Military deployment</li>
+                    <li>Pregnancy complications</li>
+                  </ul>
+                  <p>Please contact our management team at <a href="mailto:management@fitgym.com"
+                      class="text-warning">management@fitgym.com</a> with documentation.</p>
+
+                  <h6 class="text-warning mt-4">Disputes:</h6>
+                  <p>If you're not satisfied with a refund decision, you may appeal by contacting our Customer Service
+                    Manager within 14 days of the decision.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="alert alert-warning mt-5">
+            <i class="bi bi-info-circle"></i> <strong>Note:</strong> This refund policy is subject to change. Members
+            will be notified of any updates. For questions or concerns, please contact our customer service team.
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- End Refund Policy Content -->
+
+  <!-- Start Footer -->
+  <footer class="bg-dark text-light border-top border-warning pt-5">
+    <div class="container">
+      <div class="row g-4">
+        <div class="col-md-4">
+          <a class="navbar-brand text-warning fw-bold text-decoration-none d-flex align-items-center" href="index.html">
+            <img src="../assets/media/logo.png" width="40" height="40" alt="FitGym Logo" class="me-2">
+            FitGym
+          </a>
+          <p class="text-light mt-3">Achieve your health and fitness goals with expert training, modern equipment, and a
+            supportive community.</p>
+        </div>
+        <div class="col-md-4">
+          <h5 class="text-warning mb-3">Quick Links</h5>
+          <ul class="nav flex-column">
+            <li class="nav-item mb-2"><a href="privacy.html" class="nav-link p-0 text-light">Privacy Policy</a></li>
+            <li class="nav-item mb-2"><a href="terms.html" class="nav-link p-0 text-light">Terms & Conditions</a></li>
+            <li class="nav-item mb-2"><a href="refund.html" class="nav-link p-0 text-warning">Refund Policy</a></li>
+          </ul>
+        </div>
+        <div class="col-md-4">
+          <h5 class="text-warning mb-3">Stay Updated</h5>
+          <p class="text-light">Subscribe to our newsletter for fitness tips, class updates, and special offers.</p>
+          <form class="mt-3">
+            <div class="input-group">
+              <input type="email" class="form-control" placeholder="Email address" aria-label="Email address">
+              <button class="btn btn-warning" type="button">Subscribe</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+    <div class="bg-warning text-dark text-center py-3 mt-5">
+      <p class="mb-0">© 2025 FitGym. All rights reserved.</p>
+    </div>
+  </footer>
+  <!-- End Footer -->
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
   <script src="../assets/js/site-data.js"></script>

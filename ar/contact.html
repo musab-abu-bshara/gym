@@ -1,16 +1,381 @@
 <!doctype html>
-<html lang="ar">
+<html lang="ar" dir="rtl">
 
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>FitGym | اتصل بنا</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.rtl.min.css" rel="stylesheet">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
 </head>
 
-<body>
+<body class="bg-dark text-light">
 
-  <!-- Content placeholder -->
+  <!-- Start Top Bar -->
+  <header class="bg-warning text-dark py-2">
+    <div class="container d-flex justify-content-between align-items-center flex-wrap">
+      <div class="d-flex gap-3">
+        <span><i class="bi bi-telephone-fill"></i> +966 50 123 4567</span>
+        <span><i class="bi bi-envelope-fill"></i> info@fitgym.com</span>
+      </div>
+      <div class="d-flex gap-3">
+        <a href="#" class="text-dark"><i class="bi bi-facebook"></i></a>
+        <a href="#" class="text-dark"><i class="bi bi-instagram"></i></a>
+        <a href="#" class="text-dark"><i class="bi bi-twitter-x"></i></a>
+      </div>
+    </div>
+  </header>
+  <!-- End Top Bar -->
+
+  <!-- Start Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark border-bottom border-warning">
+    <div class="container">
+      <a class="navbar-brand text-warning fw-bold" href="index.html">
+        <img src="../assets/media/logo.png" width="40" height="40" alt="FitGym Logo">
+        FitGym
+      </a>
+
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item"><a class="nav-link" href="index.html">الرئيسية</a></li>
+          <li class="nav-item"><a class="nav-link" href="services.html">الصفوف</a></li>
+          <li class="nav-item"><a class="nav-link" href="portfolio.html">التحولات</a></li>
+          <li class="nav-item"><a class="nav-link" href="blog.html">المدونة</a></li>
+          <li class="nav-item"><a class="nav-link" href="about.html">من نحن</a></li>
+          <li class="nav-item"><a class="nav-link active" href="contact.html">اتصل بنا</a></li>
+        </ul>
+
+        <div class="d-flex gap-2">
+          <a href="../en/contact.html" class="btn btn-outline-warning">English</a>
+          <button class="btn btn-warning" data-bs-toggle="modal" data-bs-target="#membershipModal">
+            احصل على العضوية
+          </button>
+
+          <div class="modal fade" id="membershipModal" tabindex="-1" data-bs-theme="dark"
+            aria-labelledby="membershipModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h1 class="modal-title fs-5 text-light" id="membershipModalLabel">احصل على عضويتك</h1>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                  <form>
+                    <div class="mb-3">
+                      <input type="text" class="form-control" placeholder="الاسم الكامل" required>
+                    </div>
+                    <div class="mb-3">
+                      <input type="email" class="form-control" placeholder="البريد الإلكتروني" required>
+                    </div>
+                    <div class="mb-3">
+                      <input type="tel" class="form-control" placeholder="رقم الهاتف" required>
+                    </div>
+                    <div class="mb-3">
+                      <select class="form-select" aria-label="نوع العضوية">
+                        <option selected>اختر نوع العضوية</option>
+                        <option value="monthly">عضوية شهرية</option>
+                        <option value="quarterly">عضوية ربع سنوية</option>
+                        <option value="annual">عضوية سنوية</option>
+                        <option value="personal">باقة تدريب شخصي</option>
+                      </select>
+                    </div>
+                    <div class="mb-3">
+                      <textarea class="form-control" rows="3" placeholder="رسالة (اختياري)"></textarea>
+                    </div>
+                  </form>
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-warning w-100">إرسال الاستفسار</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </nav>
+  <!-- End Navbar -->
+
+  <!-- Start Page Header -->
+  <section class="py-5 bg-secondary">
+    <div class="container text-center">
+      <h1 class="display-4 fw-bold text-warning mb-3">اتصل بنا</h1>
+      <p class="lead text-light">نحب أن نسمع منك! تواصل مع فريقنا.</p>
+    </div>
+  </section>
+  <!-- End Page Header -->
+
+  <!-- Start Contact Section -->
+  <section class="py-5 bg-dark">
+    <div class="container">
+      <div class="row g-5">
+        <!-- Contact Form -->
+        <div class="col-lg-7">
+          <div class="card bg-secondary border-warning">
+            <div class="card-body p-4">
+              <h3 class="text-warning mb-4">أرسل لنا رسالة</h3>
+              <form>
+                <div class="row g-3">
+                  <div class="col-md-6">
+                    <label for="firstName" class="form-label text-light">الاسم الأول</label>
+                    <input type="text" class="form-control" id="firstName" required>
+                  </div>
+                  <div class="col-md-6">
+                    <label for="lastName" class="form-label text-light">اسم العائلة</label>
+                    <input type="text" class="form-control" id="lastName" required>
+                  </div>
+                  <div class="col-md-6">
+                    <label for="email" class="form-label text-light">البريد الإلكتروني</label>
+                    <input type="email" class="form-control" id="email" required>
+                  </div>
+                  <div class="col-md-6">
+                    <label for="phone" class="form-label text-light">رقم الهاتف</label>
+                    <input type="tel" class="form-control" id="phone" required>
+                  </div>
+                  <div class="col-12">
+                    <label for="subject" class="form-label text-light">الموضوع</label>
+                    <select class="form-select" id="subject" required>
+                      <option selected disabled>اختر موضوعًا</option>
+                      <option value="membership">استفسار عن العضوية</option>
+                      <option value="classes">معلومات عن الصفوف</option>
+                      <option value="personal">التدريب الشخصي</option>
+                      <option value="feedback">ملاحظات</option>
+                      <option value="other">أخرى</option>
+                    </select>
+                  </div>
+                  <div class="col-12">
+                    <label for="message" class="form-label text-light">الرسالة</label>
+                    <textarea class="form-control" id="message" rows="5" required></textarea>
+                  </div>
+                  <div class="col-12">
+                    <button type="submit" class="btn btn-warning btn-lg w-100">إرسال الرسالة</button>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+
+        <!-- Contact Information -->
+        <div class="col-lg-5">
+          <div class="card bg-secondary border-warning mb-4">
+            <div class="card-body p-4">
+              <h3 class="text-warning mb-4">تواصل معنا</h3>
+              <div class="d-flex mb-4">
+                <i class="bi bi-geo-alt-fill text-warning fs-3 me-3"></i>
+                <div>
+                  <h5 class="text-light mb-1">زرنا</h5>
+                  <p class="text-light mb-0">123 شارع اللياقة، الرياض 12345<br>المملكة العربية السعودية</p>
+                </div>
+              </div>
+              <div class="d-flex mb-4">
+                <i class="bi bi-telephone-fill text-warning fs-3 me-3"></i>
+                <div>
+                  <h5 class="text-light mb-1">اتصل بنا</h5>
+                  <p class="text-light mb-0">+966 50 123 4567<br>+966 11 234 5678</p>
+                </div>
+              </div>
+              <div class="d-flex mb-4">
+                <i class="bi bi-envelope-fill text-warning fs-3 me-3"></i>
+                <div>
+                  <h5 class="text-light mb-1">راسلنا عبر البريد الإلكتروني</h5>
+                  <p class="text-light mb-0">info@fitgym.com<br>support@fitgym.com</p>
+                </div>
+              </div>
+              <div class="d-flex">
+                <i class="bi bi-clock-fill text-warning fs-3 me-3"></i>
+                <div>
+                  <h5 class="text-light mb-1">ساعات العمل</h5>
+                  <p class="text-light mb-0">
+                    الاثنين - الجمعة: 5:00 صباحًا - 11:00 مساءً<br>
+                    السبت - الأحد: 6:00 صباحًا - 10:00 مساءً
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Social Media -->
+          <div class="card bg-secondary border-warning">
+            <div class="card-body p-4">
+              <h3 class="text-warning mb-4">تابعنا</h3>
+              <div class="d-flex gap-3">
+                <a href="#" class="btn btn-outline-warning btn-lg flex-fill">
+                  <i class="bi bi-facebook"></i>
+                </a>
+                <a href="#" class="btn btn-outline-warning btn-lg flex-fill">
+                  <i class="bi bi-instagram"></i>
+                </a>
+                <a href="#" class="btn btn-outline-warning btn-lg flex-fill">
+                  <i class="bi bi-twitter-x"></i>
+                </a>
+                <a href="#" class="btn btn-outline-warning btn-lg flex-fill">
+                  <i class="bi bi-youtube"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- End Contact Section -->
+
+  <!-- Start Map Section -->
+  <section class="py-5 bg-secondary">
+    <div class="container">
+      <h3 class="text-warning text-center mb-4">اعثر علينا على الخريطة</h3>
+      <div class="ratio ratio-16x9 border border-warning rounded">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3624.2!2d46.7!3d24.7!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjTCsDQyJzAwLjAiTiA0NsKwNDInMDAuMCJF!5e0!3m2!1sar!2ssa!4v1234567890123!5m2!1sar!2ssa"
+          style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+        </iframe>
+      </div>
+    </div>
+  </section>
+  <!-- End Map Section -->
+
+  <!-- Start FAQ Section -->
+  <section class="py-5 bg-dark">
+    <div class="container">
+      <div class="text-center mb-5">
+        <h2 class="fw-bold text-warning">الأسئلة الشائعة</h2>
+        <p class="text-light">إجابات سريعة على الأسئلة الشائعة</p>
+      </div>
+      <div class="row justify-content-center">
+        <div class="col-lg-8">
+          <div class="accordion" id="faqAccordion" data-bs-theme="dark">
+            <div class="accordion-item bg-secondary border-warning mb-3">
+              <h2 class="accordion-header">
+                <button class="accordion-button bg-secondary text-warning" type="button" data-bs-toggle="collapse"
+                  data-bs-target="#faq1">
+                  ما هي خيارات العضوية لديكم؟
+                </button>
+              </h2>
+              <div id="faq1" class="accordion-collapse collapse show" data-bs-parent="#faqAccordion">
+                <div class="accordion-body text-light">
+                  نقدم خطط عضوية مرنة بما في ذلك الخيارات الشهرية والربع سنوية والسنوية. لدينا أيضًا باقات تدريب شخصي
+                  وعضويات الصفوف فقط. اتصل بنا للحصول على الأسعار الحالية والعروض الخاصة.
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item bg-secondary border-warning mb-3">
+              <h2 class="accordion-header">
+                <button class="accordion-button collapsed bg-secondary text-warning" type="button"
+                  data-bs-toggle="collapse" data-bs-target="#faq2">
+                  هل أحتاج إلى حجز الصفوف مسبقًا؟
+                </button>
+              </h2>
+              <div id="faq2" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                <div class="accordion-body text-light">
+                  بينما نرحب بالزيارات المباشرة، نوصي بحجز مكانك مسبقًا من خلال تطبيق الهاتف المحمول أو الموقع
+                  الإلكتروني لضمان التوفر، خاصة للصفوف الشهيرة.
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item bg-secondary border-warning mb-3">
+              <h2 class="accordion-header">
+                <button class="accordion-button collapsed bg-secondary text-warning" type="button"
+                  data-bs-toggle="collapse" data-bs-target="#faq3">
+                  هل يتوفر موقف سيارات؟
+                </button>
+              </h2>
+              <div id="faq3" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                <div class="accordion-body text-light">
+                  نعم، نقدم موقف سيارات مجاني لجميع الأعضاء. لدينا موقف سيارات واسع مع أماكن مخصصة للأعضاء.
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item bg-secondary border-warning mb-3">
+              <h2 class="accordion-header">
+                <button class="accordion-button collapsed bg-secondary text-warning" type="button"
+                  data-bs-toggle="collapse" data-bs-target="#faq4">
+                  هل يمكنني إحضار ضيف؟
+                </button>
+              </h2>
+              <div id="faq4" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                <div class="accordion-body text-light">
+                  يمكن للأعضاء إحضار ضيوف مقابل رسوم يومية صغيرة. نقدم أيضًا تصاريح تجريبية مجانية للأعضاء المحتملين
+                  الجدد. اتصل بمكتب الاستقبال للحصول على التفاصيل.
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item bg-secondary border-warning">
+              <h2 class="accordion-header">
+                <button class="accordion-button collapsed bg-secondary text-warning" type="button"
+                  data-bs-toggle="collapse" data-bs-target="#faq5">
+                  ما الذي يجب أن أحضره في زيارتي الأولى؟
+                </button>
+              </h2>
+              <div id="faq5" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                <div class="accordion-body text-light">
+                  أحضر ملابس التمرين والأحذية الرياضية وزجاجة ماء ومنشفة. نوفر خزائن ودشات. إذا كنت جديدًا، احضر قبل 15
+                  دقيقة للحصول على جولة في المنشأة والتوجيه.
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- End FAQ Section -->
+
+  <!-- Start CTA Section -->
+  <section id="cta" class="py-5 bg-warning text-dark">
+    <div class="container text-center">
+      <h2 class="display-5 fw-bold mb-3">هل أنت مستعد لبدء رحلتك؟</h2>
+      <p class="lead mb-4">انضم إلى FitGym اليوم وحول حياتك</p>
+      <button type="button" class="btn btn-dark btn-lg" data-bs-toggle="modal" data-bs-target="#membershipModal">
+        احصل على عضويتك
+      </button>
+    </div>
+  </section>
+  <!-- End CTA Section -->
+
+  <!-- Start Footer -->
+  <footer class="bg-dark text-light border-top border-warning pt-5">
+    <div class="container">
+      <div class="row g-4">
+        <div class="col-md-4">
+          <a class="navbar-brand text-warning fw-bold text-decoration-none d-flex align-items-center" href="index.html">
+            <img src="../assets/media/logo.png" width="40" height="40" alt="FitGym Logo" class="me-2">
+            FitGym
+          </a>
+          <p class="text-light mt-3">حقق أهداف صحتك ولياقتك البدنية مع التدريب الخبير والمعدات الحديثة والمجتمع الداعم.
+          </p>
+        </div>
+        <div class="col-md-4">
+          <h5 class="text-warning mb-3">روابط سريعة</h5>
+          <ul class="nav flex-column">
+            <li class="nav-item mb-2"><a href="privacy.html" class="nav-link p-0 text-light">سياسة الخصوصية</a></li>
+            <li class="nav-item mb-2"><a href="terms.html" class="nav-link p-0 text-light">الشروط والأحكام</a></li>
+            <li class="nav-item mb-2"><a href="refund.html" class="nav-link p-0 text-light">سياسة الاسترداد</a></li>
+          </ul>
+        </div>
+        <div class="col-md-4">
+          <h5 class="text-warning mb-3">ابق على اطلاع</h5>
+          <p class="text-light">اشترك في نشرتنا الإخبارية للحصول على نصائح اللياقة البدنية وتحديثات الصفوف والعروض
+            الخاصة.</p>
+          <form class="mt-3">
+            <div class="input-group">
+              <input type="email" class="form-control" placeholder="البريد الإلكتروني" aria-label="البريد الإلكتروني">
+              <button class="btn btn-warning" type="button">اشترك</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+    <div class="bg-warning text-dark text-center py-3 mt-5">
+      <p class="mb-0">© 2025 FitGym. جميع الحقوق محفوظة.</p>
+    </div>
+  </footer>
+  <!-- End Footer -->
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
   <script src="../assets/js/site-data.js"></script>

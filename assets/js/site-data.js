@@ -1,7 +1,10 @@
 // FitGym Site Data and Functions
 
+// Detect language from page
+const isArabic = document.documentElement.lang === 'ar';
+
 // Classes Data
-const classes = [
+const classesEn = [
   {
     id: 1,
     name: "HIIT Training",
@@ -69,8 +72,78 @@ const classes = [
   },
 ];
 
+const classesAr = [
+  {
+    id: 1,
+    name: "تدريب HIIT",
+    category: "الكارديو",
+    duration: "45 دقيقة",
+    level: "متوسط",
+    description:
+      "تدريب متقطع عالي الكثافة لحرق أقصى قدر من السعرات الحرارية واللياقة القلبية الوعائية.",
+    trainer: "مايك ديفيس",
+    schedule: "الإثنين، الأربعاء، الجمعة - 6:00 صباحاً",
+  },
+  {
+    id: 2,
+    name: "يوغا فلو",
+    category: "اليوغا",
+    duration: "60 دقيقة",
+    level: "جميع المستويات",
+    description:
+      "تحسين المرونة والتوازن والعافية العقلية من خلال تسلسلات اليوغا المتدفقة.",
+    trainer: "سارة جونسون",
+    schedule: "الثلاثاء، الخميس - 7:00 صباحاً",
+  },
+  {
+    id: 3,
+    name: "تدريب القوة",
+    category: "القوة",
+    duration: "50 دقيقة",
+    level: "مبتدئ-متقدم",
+    description:
+      "بناء العضلات وزيادة القوة من خلال جلسات تدريب الأوزان الموجهة.",
+    trainer: "جون سميث",
+    schedule: "الإثنين، الأربعاء، الجمعة - 5:00 مساءً",
+  },
+  {
+    id: 4,
+    name: "كروس فيت",
+    category: "القوة",
+    duration: "60 دقيقة",
+    level: "متقدم",
+    description:
+      "لياقة وظيفية مكثفة تجمع بين الكارديو ورفع الأثقال وتمارين وزن الجسم.",
+    trainer: "مايك ديفيس",
+    schedule: "الثلاثاء، الخميس، السبت - 6:00 صباحاً",
+  },
+  {
+    id: 5,
+    name: "رقص زومبا",
+    category: "الرقص",
+    duration: "45 دقيقة",
+    level: "جميع المستويات",
+    description:
+      "تمرين رقص ممتع ومفعم بالطاقة يجمع بين الموسيقى اللاتينية والعالمية.",
+    trainer: "ليزا براون",
+    schedule: "الإثنين، الأربعاء - 6:30 مساءً",
+  },
+  {
+    id: 6,
+    name: "التدريب الشخصي",
+    category: "شخصي",
+    duration: "60 دقيقة",
+    level: "مخصص",
+    description: "تدريب فردي مصمم خصيصاً لأهداف لياقتك المحددة.",
+    trainer: "جميع المدربين",
+    schedule: "بموعد مسبق",
+  },
+];
+
+const classes = isArabic ? classesAr : classesEn;
+
 // Transformations Data
-const transformations = [
+const transformationsEn = [
   {
     id: 1,
     name: "Ahmed K.",
@@ -109,8 +182,49 @@ const transformations = [
   },
 ];
 
+const transformationsAr = [
+  {
+    id: 1,
+    name: "أحمد ك.",
+    category: "فقدان الوزن",
+    weightLost: "30 كجم",
+    duration: "8 أشهر",
+    story:
+      "فقد 30 كجم في 8 أشهر بالتفاني والتوجيه الخبير من مدربي فت جيم.",
+  },
+  {
+    id: 2,
+    name: "سارة م.",
+    category: "رحلة اللياقة",
+    achievement: "تغيير نمط حياة كامل",
+    duration: "سنة واحدة",
+    story:
+      "تحولت من نمط حياة خامل إلى الركض في الماراثونات وتدريس حصص اللياقة.",
+  },
+  {
+    id: 3,
+    name: "محمد أ.",
+    category: "بناء العضلات",
+    muscleGained: "15 كجم",
+    duration: "10 أشهر",
+    story:
+      "بنى 15 كجم من العضلات من خلال التدريب المستمر وإرشادات التغذية.",
+  },
+  {
+    id: 4,
+    name: "فاطمة ح.",
+    category: "فقدان الوزن",
+    weightLost: "22 كجم",
+    duration: "6 أشهر",
+    story:
+      "حققت أهداف فقدان الوزن من خلال اليوغا والكارديو وعادات الأكل الصحية.",
+  },
+];
+
+const transformations = isArabic ? transformationsAr : transformationsEn;
+
 // Blog Posts Data
-const blogPosts = [
+const blogPostsEn = [
   {
     id: 1,
     title: "10 Best Exercises for Building Muscle",
@@ -153,6 +267,81 @@ const blogPosts = [
   },
 ];
 
+const blogPostsAr = [
+  {
+    id: 1,
+    title: "أفضل 10 تمارين لبناء العضلات",
+    category: "نصائح التمرين",
+    author: "جون سميث",
+    date: "2025-10-20",
+    excerpt:
+      "اكتشف التمارين الأكثر فعالية لنمو العضلات وبناء القوة.",
+    readTime: "5 دقائق قراءة",
+  },
+  {
+    id: 2,
+    title: "دليل التغذية لفقدان الوزن",
+    category: "التغذية",
+    author: "ليزا براون",
+    date: "2025-10-18",
+    excerpt:
+      "تعلم مبادئ التغذية الأساسية لفقدان الوزن المستدام.",
+    readTime: "7 دقائق قراءة",
+  },
+  {
+    id: 3,
+    title: "فوائد التمارين الصباحية",
+    category: "نمط حياة اللياقة",
+    author: "مايك ديفيس",
+    date: "2025-10-15",
+    excerpt:
+      "لماذا يمكن أن يحول التمرين في الصباح رحلة لياقتك.",
+    readTime: "4 دقائق قراءة",
+  },
+  {
+    id: 4,
+    title: "اليوغا لتخفيف التوتر",
+    category: "الصحة",
+    author: "سارة جونسون",
+    date: "2025-10-12",
+    excerpt:
+      "كيف يمكن أن تساعد ممارسة اليوغا في إدارة التوتر وتحسين الصحة العقلية.",
+    readTime: "6 دقائق قراءة",
+  },
+];
+
+const blogPosts = isArabic ? blogPostsAr : blogPostsEn;
+
+// Translation texts
+const texts = {
+  en: {
+    learnMore: "Learn More",
+    readMore: "Read More",
+    viewDetails: "View Details",
+    duration: "Duration:",
+    level: "Level:",
+    trainer: "Trainer:",
+    schedule: "Schedule:",
+    classNotFound: "Class not found. Please select a class from our services page.",
+    blogNotFound: "Blog post not found. Please select a post from our blog page.",
+    by: "By",
+  },
+  ar: {
+    learnMore: "اعرف المزيد",
+    readMore: "اقرأ المزيد",
+    viewDetails: "عرض التفاصيل",
+    duration: "المدة:",
+    level: "المستوى:",
+    trainer: "المدرب:",
+    schedule: "الجدول:",
+    classNotFound: "لم يتم العثور على الحصة. يرجى اختيار حصة من صفحة خدماتنا.",
+    blogNotFound: "لم يتم العثور على المقال. يرجى اختيار مقال من صفحة مدونتنا.",
+    by: "بواسطة",
+  }
+};
+
+const t = isArabic ? texts.ar : texts.en;
+
 // Function to populate featured classes on home page
 function populateFeaturedClasses() {
   const container = document.getElementById("featuredClassesGrid");
@@ -171,7 +360,7 @@ function populateFeaturedClasses() {
           <p class="text-light mb-2"><i class="bi bi-clock"></i> ${classItem.duration}</p>
           <p class="text-light mb-2"><i class="bi bi-person"></i> ${classItem.trainer}</p>
           <p class="card-text text-light">${classItem.description}</p>
-          <a href="service-details.html?id=${classItem.id}" class="btn btn-outline-warning">Learn More</a>
+          <a href="service-details.html?id=${classItem.id}" class="btn btn-outline-warning">${t.learnMore}</a>
         </div>
       </div>
     `;
@@ -232,7 +421,7 @@ function populateBlogPreview() {
             <i class="bi bi-clock"></i> ${post.readTime}
           </p>
           <p class="card-text text-light">${post.excerpt}</p>
-          <a href="blog-details.html?id=${post.id}" class="btn btn-outline-warning">Read More</a>
+          <a href="blog-details.html?id=${post.id}" class="btn btn-outline-warning">${t.readMore}</a>
         </div>
       </div>
     `;
@@ -257,7 +446,7 @@ function populateAllClasses() {
           <p class="text-light mb-2"><i class="bi bi-person"></i> ${classItem.trainer}</p>
           <p class="card-text text-light">${classItem.description}</p>
           <p class="text-light small"><i class="bi bi-calendar"></i> ${classItem.schedule}</p>
-          <a href="service-details.html?id=${classItem.id}" class="btn btn-outline-warning mt-2">View Details</a>
+          <a href="service-details.html?id=${classItem.id}" class="btn btn-outline-warning mt-2">${t.viewDetails}</a>
         </div>
       </div>
     `;
@@ -313,7 +502,7 @@ function populateAllBlogPosts() {
             <i class="bi bi-calendar"></i> ${post.date} | <i class="bi bi-clock"></i> ${post.readTime}
           </p>
           <p class="card-text text-light">${post.excerpt}</p>
-          <a href="blog-details.html?id=${post.id}" class="btn btn-outline-warning">Read More</a>
+          <a href="blog-details.html?id=${post.id}" class="btn btn-outline-warning">${t.readMore}</a>
         </div>
       </div>
     `;
@@ -376,7 +565,7 @@ function filterClasses(category) {
           <p class="text-light mb-2"><i class="bi bi-person"></i> ${classItem.trainer}</p>
           <p class="card-text text-light">${classItem.description}</p>
           <p class="text-light small"><i class="bi bi-calendar"></i> ${classItem.schedule}</p>
-          <a href="service-details.html?id=${classItem.id}" class="btn btn-outline-warning mt-2">View Details</a>
+          <a href="service-details.html?id=${classItem.id}" class="btn btn-outline-warning mt-2">${t.viewDetails}</a>
         </div>
       </div>
     `;
@@ -494,7 +683,7 @@ function loadClassDetails() {
 
   if (!classId) {
     container.innerHTML =
-      '<p class="text-warning">Class not found. Please select a class from our services page.</p>';
+      `<p class="text-warning">${t.classNotFound}</p>`;
     return;
   }
 
@@ -503,7 +692,7 @@ function loadClassDetails() {
 
   if (!classItem) {
     container.innerHTML =
-      '<p class="text-warning">Class not found. Please select a class from our services page.</p>';
+      `<p class="text-warning">${t.classNotFound}</p>`;
     return;
   }
 
@@ -513,16 +702,16 @@ function loadClassDetails() {
     <h1 class="text-warning mb-3">${classItem.name}</h1>
     <div class="row mb-4">
       <div class="col-md-3">
-        <p class="text-light"><i class="bi bi-clock"></i> <strong>Duration:</strong><br>${classItem.duration}</p>
+        <p class="text-light"><i class="bi bi-clock"></i> <strong>${t.duration}</strong><br>${classItem.duration}</p>
       </div>
       <div class="col-md-3">
-        <p class="text-light"><i class="bi bi-bar-chart"></i> <strong>Level:</strong><br>${classItem.level}</p>
+        <p class="text-light"><i class="bi bi-bar-chart"></i> <strong>${t.level}</strong><br>${classItem.level}</p>
       </div>
       <div class="col-md-3">
-        <p class="text-light"><i class="bi bi-person"></i> <strong>Trainer:</strong><br>${classItem.trainer}</p>
+        <p class="text-light"><i class="bi bi-person"></i> <strong>${t.trainer}</strong><br>${classItem.trainer}</p>
       </div>
       <div class="col-md-3">
-        <p class="text-light"><i class="bi bi-calendar"></i> <strong>Schedule:</strong><br>${classItem.schedule}</p>
+        <p class="text-light"><i class="bi bi-calendar"></i> <strong>${t.schedule}</strong><br>${classItem.schedule}</p>
       </div>
     </div>
     <p class="lead text-light">${classItem.description}</p>
@@ -560,7 +749,7 @@ function loadBlogDetails() {
 
   if (!blogId) {
     container.innerHTML =
-      '<p class="text-warning">Blog post not found. Please select a post from our blog page.</p>';
+      `<p class="text-warning">${t.blogNotFound}</p>`;
     return;
   }
 
@@ -569,7 +758,7 @@ function loadBlogDetails() {
 
   if (!post) {
     container.innerHTML =
-      '<p class="text-warning">Blog post not found. Please select a post from our blog page.</p>';
+      `<p class="text-warning">${t.blogNotFound}</p>`;
     return;
   }
 
@@ -578,7 +767,7 @@ function loadBlogDetails() {
     <span class="badge bg-warning text-dark mb-3">${post.category}</span>
     <h1 class="text-warning mb-3">${post.title}</h1>
     <p class="text-light mb-4">
-      <i class="bi bi-person"></i> By ${post.author} | 
+      <i class="bi bi-person"></i> ${t.by} ${post.author} | 
       <i class="bi bi-calendar"></i> ${post.date} | 
       <i class="bi bi-clock"></i> ${post.readTime}
     </p>

@@ -321,6 +321,31 @@ function populateAllBlogPosts() {
   });
 }
 
+// Function to populate popular posts in sidebar
+function populatePopularPosts() {
+  const container = document.getElementById("popularPosts");
+  if (!container) return;
+
+  // Show top 5 posts
+  const popularPosts = blogPosts.slice(0, 5);
+
+  popularPosts.forEach((post) => {
+    const postItem = document.createElement("div");
+    postItem.className = "mb-3 pb-3 border-bottom border-warning";
+    postItem.innerHTML = `
+      <h6 class="mb-2">
+        <a href="blog-details.html?id=${post.id}" class="text-warning text-decoration-none">
+          ${post.title}
+        </a>
+      </h6>
+      <p class="text-light small mb-0">
+        <i class="bi bi-calendar"></i> ${post.date}
+      </p>
+    `;
+    container.appendChild(postItem);
+  });
+}
+
 // Function to filter classes by category
 let currentFilter = "all";
 
@@ -375,32 +400,41 @@ function filterClasses(category) {
 }
 
 // Function to filter transformations by category
-let currentTransformationFilter = 'all';
+let currentTransformationFilter = "all";
 
 function filterTransformations(category) {
   currentTransformationFilter = category;
-  const container = document.getElementById('transformationsGrid');
+  const container = document.getElementById("transformationsGrid");
   if (!container) return;
 
   // Clear existing content
-  container.innerHTML = '';
+  container.innerHTML = "";
 
   // Filter transformations based on category
-  const filteredTransformations = category === 'all' 
-    ? transformations 
-    : transformations.filter(transformation => transformation.category === category);
+  const filteredTransformations =
+    category === "all"
+      ? transformations
+      : transformations.filter(
+          (transformation) => transformation.category === category
+        );
 
   // Populate filtered transformations
-  filteredTransformations.forEach(transformation => {
-    const col = document.createElement('div');
-    col.className = 'col-md-6 col-lg-3';
+  filteredTransformations.forEach((transformation) => {
+    const col = document.createElement("div");
+    col.className = "col-md-6 col-lg-3";
     col.innerHTML = `
       <div class="card bg-dark border-warning h-100">
         <div class="card-body">
           <i class="bi bi-person-badge display-1 text-warning mb-3 d-block text-center"></i>
           <h5 class="card-title text-warning">${transformation.name}</h5>
-          <p class="text-light"><span class="badge bg-warning text-dark">${transformation.category}</span></p>
-          <p class="text-light">${transformation.weightLost || transformation.muscleGained || transformation.achievement}</p>
+          <p class="text-light"><span class="badge bg-warning text-dark">${
+            transformation.category
+          }</span></p>
+          <p class="text-light">${
+            transformation.weightLost ||
+            transformation.muscleGained ||
+            transformation.achievement
+          }</p>
           <p class="small text-light mb-2">${transformation.duration}</p>
           <p class="card-text text-light small">${transformation.story}</p>
         </div>
@@ -410,15 +444,17 @@ function filterTransformations(category) {
   });
 
   // Update button states
-  const filterButtons = document.querySelectorAll('.btn[onclick^="filterTransformations"]');
-  filterButtons.forEach(button => {
-    const btnCategory = button.getAttribute('onclick').match(/'([^']+)'/)[1];
+  const filterButtons = document.querySelectorAll(
+    '.btn[onclick^="filterTransformations"]'
+  );
+  filterButtons.forEach((button) => {
+    const btnCategory = button.getAttribute("onclick").match(/'([^']+)'/)[1];
     if (btnCategory === category) {
-      button.classList.remove('btn-outline-warning');
-      button.classList.add('btn-warning');
+      button.classList.remove("btn-outline-warning");
+      button.classList.add("btn-warning");
     } else {
-      button.classList.remove('btn-warning');
-      button.classList.add('btn-outline-warning');
+      button.classList.remove("btn-warning");
+      button.classList.add("btn-outline-warning");
     }
   });
 }
@@ -438,4 +474,5 @@ document.addEventListener("DOMContentLoaded", function () {
 
   // Blog page
   populateAllBlogPosts();
+  populatePopularPosts();
 });

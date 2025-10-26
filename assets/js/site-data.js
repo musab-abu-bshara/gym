@@ -475,4 +475,119 @@ document.addEventListener("DOMContentLoaded", function () {
   // Blog page
   populateAllBlogPosts();
   populatePopularPosts();
+
+  // Service details page
+  loadClassDetails();
+
+  // Blog details page
+  loadBlogDetails();
 });
+
+// Function to load class details on service-details page
+function loadClassDetails() {
+  const container = document.getElementById("classDetails");
+  if (!container) return;
+
+  // Get class ID from URL
+  const urlParams = new URLSearchParams(window.location.search);
+  const classId = parseInt(urlParams.get("id"));
+
+  if (!classId) {
+    container.innerHTML =
+      '<p class="text-warning">Class not found. Please select a class from our services page.</p>';
+    return;
+  }
+
+  // Find the class
+  const classItem = classes.find((c) => c.id === classId);
+
+  if (!classItem) {
+    container.innerHTML =
+      '<p class="text-warning">Class not found. Please select a class from our services page.</p>';
+    return;
+  }
+
+  // Render class details
+  container.innerHTML = `
+    <span class="badge bg-warning text-dark mb-3">${classItem.category}</span>
+    <h1 class="text-warning mb-3">${classItem.name}</h1>
+    <div class="row mb-4">
+      <div class="col-md-3">
+        <p class="text-light"><i class="bi bi-clock"></i> <strong>Duration:</strong><br>${classItem.duration}</p>
+      </div>
+      <div class="col-md-3">
+        <p class="text-light"><i class="bi bi-bar-chart"></i> <strong>Level:</strong><br>${classItem.level}</p>
+      </div>
+      <div class="col-md-3">
+        <p class="text-light"><i class="bi bi-person"></i> <strong>Trainer:</strong><br>${classItem.trainer}</p>
+      </div>
+      <div class="col-md-3">
+        <p class="text-light"><i class="bi bi-calendar"></i> <strong>Schedule:</strong><br>${classItem.schedule}</p>
+      </div>
+    </div>
+    <p class="lead text-light">${classItem.description}</p>
+  `;
+
+  // Populate sidebar with all classes
+  const sidebar = document.getElementById("allClassesSidebar");
+  if (sidebar) {
+    classes.forEach((c) => {
+      const listItem = document.createElement("a");
+      listItem.href = `service-details.html?id=${c.id}`;
+      listItem.className = `list-group-item list-group-item-action bg-dark text-light border-warning ${
+        c.id === classId ? "active" : ""
+      }`;
+      listItem.innerHTML = `
+        <div class="d-flex w-100 justify-content-between">
+          <h6 class="mb-1">${c.name}</h6>
+          <small><i class="bi bi-clock"></i> ${c.duration}</small>
+        </div>
+        <small>${c.category}</small>
+      `;
+      sidebar.appendChild(listItem);
+    });
+  }
+}
+
+// Function to load blog details on blog-details page
+function loadBlogDetails() {
+  const container = document.getElementById("blogDetails");
+  if (!container) return;
+
+  // Get blog ID from URL
+  const urlParams = new URLSearchParams(window.location.search);
+  const blogId = parseInt(urlParams.get("id"));
+
+  if (!blogId) {
+    container.innerHTML =
+      '<p class="text-warning">Blog post not found. Please select a post from our blog page.</p>';
+    return;
+  }
+
+  // Find the blog post
+  const post = blogPosts.find((p) => p.id === blogId);
+
+  if (!post) {
+    container.innerHTML =
+      '<p class="text-warning">Blog post not found. Please select a post from our blog page.</p>';
+    return;
+  }
+
+  // Render blog details
+  container.innerHTML = `
+    <span class="badge bg-warning text-dark mb-3">${post.category}</span>
+    <h1 class="text-warning mb-3">${post.title}</h1>
+    <p class="text-light mb-4">
+      <i class="bi bi-person"></i> By ${post.author} | 
+      <i class="bi bi-calendar"></i> ${post.date} | 
+      <i class="bi bi-clock"></i> ${post.readTime}
+    </p>
+    <div class="alert alert-warning">
+      <i class="bi bi-info-circle"></i> ${post.excerpt}
+    </div>
+    <p class="text-light">${post.excerpt}</p>
+    <p class="text-light">This is a sample blog post content. In a real application, this would contain the full article with detailed information, images, and formatting.</p>
+    <p class="text-light">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+    <p class="text-light">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+  `;
+}

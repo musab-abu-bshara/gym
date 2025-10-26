@@ -1,7 +1,7 @@
 // FitGym Site Data and Functions
 
 // Detect language from page
-const isArabic = document.documentElement.lang === 'ar';
+const isArabic = document.documentElement.lang === "ar";
 
 // Classes Data
 const classesEn = [
@@ -189,8 +189,7 @@ const transformationsAr = [
     category: "فقدان الوزن",
     weightLost: "30 كجم",
     duration: "8 أشهر",
-    story:
-      "فقد 30 كجم في 8 أشهر بالتفاني والتوجيه الخبير من مدربي فت جيم.",
+    story: "فقد 30 كجم في 8 أشهر بالتفاني والتوجيه الخبير من مدربي فت جيم.",
   },
   {
     id: 2,
@@ -207,8 +206,7 @@ const transformationsAr = [
     category: "بناء العضلات",
     muscleGained: "15 كجم",
     duration: "10 أشهر",
-    story:
-      "بنى 15 كجم من العضلات من خلال التدريب المستمر وإرشادات التغذية.",
+    story: "بنى 15 كجم من العضلات من خلال التدريب المستمر وإرشادات التغذية.",
   },
   {
     id: 4,
@@ -274,8 +272,7 @@ const blogPostsAr = [
     category: "نصائح التمرين",
     author: "جون سميث",
     date: "2025-10-20",
-    excerpt:
-      "اكتشف التمارين الأكثر فعالية لنمو العضلات وبناء القوة.",
+    excerpt: "اكتشف التمارين الأكثر فعالية لنمو العضلات وبناء القوة.",
     readTime: "5 دقائق قراءة",
   },
   {
@@ -284,8 +281,7 @@ const blogPostsAr = [
     category: "التغذية",
     author: "ليزا براون",
     date: "2025-10-18",
-    excerpt:
-      "تعلم مبادئ التغذية الأساسية لفقدان الوزن المستدام.",
+    excerpt: "تعلم مبادئ التغذية الأساسية لفقدان الوزن المستدام.",
     readTime: "7 دقائق قراءة",
   },
   {
@@ -294,8 +290,7 @@ const blogPostsAr = [
     category: "نمط حياة اللياقة",
     author: "مايك ديفيس",
     date: "2025-10-15",
-    excerpt:
-      "لماذا يمكن أن يحول التمرين في الصباح رحلة لياقتك.",
+    excerpt: "لماذا يمكن أن يحول التمرين في الصباح رحلة لياقتك.",
     readTime: "4 دقائق قراءة",
   },
   {
@@ -322,8 +317,10 @@ const texts = {
     level: "Level:",
     trainer: "Trainer:",
     schedule: "Schedule:",
-    classNotFound: "Class not found. Please select a class from our services page.",
-    blogNotFound: "Blog post not found. Please select a post from our blog page.",
+    classNotFound:
+      "Class not found. Please select a class from our services page.",
+    blogNotFound:
+      "Blog post not found. Please select a post from our blog page.",
     by: "By",
   },
   ar: {
@@ -337,7 +334,7 @@ const texts = {
     classNotFound: "لم يتم العثور على الحصة. يرجى اختيار حصة من صفحة خدماتنا.",
     blogNotFound: "لم يتم العثور على المقال. يرجى اختيار مقال من صفحة مدونتنا.",
     by: "بواسطة",
-  }
+  },
 };
 
 const t = isArabic ? texts.ar : texts.en;
@@ -682,8 +679,7 @@ function loadClassDetails() {
   const classId = parseInt(urlParams.get("id"));
 
   if (!classId) {
-    container.innerHTML =
-      `<p class="text-warning">${t.classNotFound}</p>`;
+    container.innerHTML = `<p class="text-warning">${t.classNotFound}</p>`;
     return;
   }
 
@@ -691,8 +687,7 @@ function loadClassDetails() {
   const classItem = classes.find((c) => c.id === classId);
 
   if (!classItem) {
-    container.innerHTML =
-      `<p class="text-warning">${t.classNotFound}</p>`;
+    container.innerHTML = `<p class="text-warning">${t.classNotFound}</p>`;
     return;
   }
 
@@ -748,8 +743,7 @@ function loadBlogDetails() {
   const blogId = parseInt(urlParams.get("id"));
 
   if (!blogId) {
-    container.innerHTML =
-      `<p class="text-warning">${t.blogNotFound}</p>`;
+    container.innerHTML = `<p class="text-warning">${t.blogNotFound}</p>`;
     return;
   }
 
@@ -757,8 +751,7 @@ function loadBlogDetails() {
   const post = blogPosts.find((p) => p.id === blogId);
 
   if (!post) {
-    container.innerHTML =
-      `<p class="text-warning">${t.blogNotFound}</p>`;
+    container.innerHTML = `<p class="text-warning">${t.blogNotFound}</p>`;
     return;
   }
 
